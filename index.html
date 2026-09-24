@@ -592,7 +592,7 @@ body.menu-open .mm-nav a{opacity:1;transform:none}
    ===================================================================== */
 
 const SOCIAL_LINKS = [
-  { name:"Golden Vitality", handle:"@GoldenVitalityHealth", icon:"youtube", logo:"gv-logo.png",
+  { name:"Golden Vitality", handle:"@GoldenVitalityHealth", icon:"youtube",
     url:"https://www.youtube.com/@GoldenVitalityHealth", cta:"Subscribe",
     blurb:"Long-form guides on healthy aging, nutrition, and everyday strength." }
 ];
@@ -847,9 +847,7 @@ function renderGrid(cat){
 }
 function renderSocials(){
   const mk = s => {
-    var ico = s.logo
-      ? '<img class="soc-logo" src="' + esc(s.logo) + '" data-chain="gvlogo" data-try="0" alt="' + esc(s.name) + ' logo">'
-      : ICONS[s.icon];
+        var ico = ICONS[s.icon];
     return '<a class="soc" href="' + esc(s.url) + '" target="_blank" rel="noopener">' +
       '<span class="soc-ico">' + ico + '</span>' +
       '<span class="soc-name serif">' + esc(s.name) + '</span>' +
