@@ -4,448 +4,342 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>VAYRON — Premium Health &amp; Wellness</title>
-<meta name="description" content="Doctor-curated health and wellness products for strength, heart, mind, and healthy aging.">
+<meta name="description" content="Curated health and wellness products for strength, heart, mind, and healthy aging.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="VAYRON — Premium Health &amp; Wellness">
-<meta property="og:description" content="Doctor-curated products for strength, heart, mind, and healthy aging.">
-<meta property="og:url" content="https://YOUR-LIVE-URL">
-<meta property="og:image" https://averycarter85.github.io/averycarter.github.io/hero-poster.png.png
+<meta property="og:description" content="Curated products for strength, heart, mind, and healthy aging.">
+<meta property="og:url" content="https://vayron-wellness.github.io/">
+<meta property="og:image" content="https://vayron-wellness.github.io/hero-poster.png.png">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23263521'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='30' fill='%23F1EDDE' text-anchor='middle'%3EAC%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23111111'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='32' fill='%23FAFAF8' text-anchor='middle'%3EV%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{
-  --ivory:#F6F1E4; --cream:#FCF9F1; --sand:#ECE5D2; --stone:#C8BFA6;
-  --sage:#AAB795; --sage-d:#546849; --green:#263521; --green-deep:#162010;
-  --ink:#23261F; --ink-2:#565949; --clay:#AA6340;
-  --line:rgba(35,38,31,.14);
+  --bg:#FAFAF8; --white:#FFFFFF; --ink:#111111; --ink-2:#6B6B66;
+  --gold:#C19A6B; --gold-d:#A8835A; --line:#EAEAE6; --line-2:#F1F1ED;
   --serif:'Instrument Serif',Georgia,serif;
   --sans:'Manrope','Segoe UI',sans-serif;
   --ease:cubic-bezier(.22,.7,.25,1);
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;scroll-padding-top:92px}
-body{font-family:var(--sans);background:var(--ivory);color:var(--ink);line-height:1.65;
+html{scroll-behavior:smooth;scroll-padding-top:96px}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);line-height:1.65;
   -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
 img,svg{display:block}
 a{color:inherit}
 button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
-:focus-visible{outline:2px solid var(--sage-d);outline-offset:3px;border-radius:6px}
-.skip{position:fixed;left:16px;top:-60px;z-index:3000;background:var(--green);color:var(--cream);
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:6px}
+.skip{position:fixed;left:16px;top:-60px;z-index:3000;background:var(--ink);color:var(--white);
   padding:10px 18px;border-radius:999px;text-decoration:none;font-weight:600;transition:top .3s}
 .skip:focus{top:16px}
 .serif{font-family:var(--serif);font-weight:400}
-.eyebrow{font-size:11px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--sage-d)}
+.eyebrow{font-size:11px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--gold-d)}
 
-.grain{position:fixed;inset:-60%;z-index:2100;pointer-events:none;opacity:.05;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
-.atmos{position:absolute;inset:0;pointer-events:none}
-.atmos i{position:absolute;border-radius:50%;filter:blur(85px);opacity:.55}
-.atmos i:nth-child(1){width:54vw;height:54vw;background:#DFE3CC;top:-8%;left:-14%;animation:dr1 52s ease-in-out infinite alternate}
-.atmos i:nth-child(2){width:46vw;height:46vw;background:#F2EBD6;top:26%;right:-16%;animation:dr2 64s ease-in-out infinite alternate}
-.atmos i:nth-child(3){width:50vw;height:50vw;background:#CBD5BC;top:58%;left:-10%;animation:dr3 58s ease-in-out infinite alternate}
-.atmos i:nth-child(4){width:42vw;height:42vw;background:#E8DFC9;top:84%;right:-8%;animation:dr1 70s ease-in-out infinite alternate-reverse}
-@keyframes dr1{to{transform:translate(5vw,4vw) scale(1.07)}}
-@keyframes dr2{to{transform:translate(-6vw,3vw) scale(1.1)}}
-@keyframes dr3{to{transform:translate(4vw,-4vw) scale(.95)}}
+/* ---------- NAV ---------- */
+.nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(250,250,248,.92);
+  backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--line);transition:box-shadow .3s}
+.nav.scrolled{box-shadow:0 4px 24px rgba(17,17,17,.06)}
+.nav-inner{max-width:1240px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;
+  gap:16px;padding:16px clamp(20px,4vw,44px)}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink)}
+.brand .mono{width:34px;height:34px;flex:none}
+.brand span{font-family:var(--serif);font-size:1.5rem;letter-spacing:.14em}
+.nav-links{display:flex;gap:4px}
+.nav-links a{padding:8px 14px;border-radius:999px;font-size:13.5px;font-weight:600;color:var(--ink-2);text-decoration:none;transition:.25s}
+.nav-links a:hover{color:var(--ink);background:var(--line-2)}
+.nav-right{display:flex;align-items:center;gap:10px}
+.btn-dark{display:inline-flex;align-items:center;gap:8px;background:var(--ink);color:var(--white);
+  padding:10px 18px;border-radius:999px;font-size:13px;font-weight:700;text-decoration:none;
+  transition:transform .3s var(--ease),box-shadow .3s;white-space:nowrap}
+.btn-dark svg{width:14px;height:14px;transition:transform .3s var(--ease)}
+.btn-dark:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(17,17,17,.16)}
+.btn-dark:hover svg{transform:translateX(3px)}
+.burger{display:none;width:40px;height:40px;border-radius:999px;border:1px solid var(--line);
+  flex-direction:column;align-items:center;justify-content:center;gap:5px;transition:.3s}
+.burger span{width:17px;height:1.5px;background:var(--ink);transition:transform .3s var(--ease)}
+body.menu-open .burger span:first-child{transform:translateY(3.25px) rotate(45deg)}
+body.menu-open .burger span:last-child{transform:translateY(-3.25px) rotate(-45deg)}
 
-.nav{position:fixed;top:14px;left:0;right:0;z-index:1000;pointer-events:none}
-.nav-inner{max-width:1280px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;
-  gap:16px;padding:0 22px;pointer-events:none}
-.nav>*{pointer-events:auto}
-.brand{display:flex;align-items:center;gap:11px;text-decoration:none;color:var(--ink);transition:color .4s}
-.brand .mono{width:38px;height:38px;flex:none}
-.brand span{font-family:var(--serif);font-size:1.28rem;letter-spacing:.01em;white-space:nowrap}
-.nav-pill{display:flex;align-items:center;gap:2px;padding:5px;border-radius:999px;
-  background:rgba(252,249,241,.55);border:1px solid rgba(255,255,255,.55);
-  backdrop-filter:blur(18px) saturate(1.5);-webkit-backdrop-filter:blur(18px) saturate(1.5);
-  box-shadow:0 10px 34px -16px rgba(35,38,31,.3),inset 0 1px 0 rgba(255,255,255,.65);
-  transition:background .4s,border-color .4s}
-body.nav-scrolled .nav-pill{background:rgba(252,249,241,.78)}
-.nav-pill a,.cats-toggle{display:flex;align-items:center;gap:6px;padding:9px 16px;border-radius:999px;
-  font-size:13.5px;font-weight:600;color:var(--ink);text-decoration:none;transition:background .3s,color .3s;white-space:nowrap}
-.nav-pill a:hover,.cats-toggle:hover{background:rgba(255,255,255,.75)}
-.caret{width:14px;height:14px;transition:transform .35s var(--ease)}
+/* mega menu */
 .nav-cats{position:relative}
+.cats-toggle{display:flex;align-items:center;gap:6px;padding:8px 14px;border-radius:999px;
+  font-size:13.5px;font-weight:600;color:var(--ink-2);transition:.25s;white-space:nowrap}
+.cats-toggle:hover{color:var(--ink);background:var(--line-2)}
+.caret{width:13px;height:13px;transition:transform .3s var(--ease)}
 .nav-cats.open .caret{transform:rotate(180deg)}
-.nav-right{display:flex;align-items:center;gap:12px}
-.btn-solid{display:inline-flex;align-items:center;gap:9px;background:var(--green);color:#F3EFE3;
-  padding:12px 21px;border-radius:999px;font-size:13.5px;font-weight:700;text-decoration:none;
-  transition:background .3s,transform .35s var(--ease),box-shadow .35s;white-space:nowrap}
-.btn-solid svg{width:15px;height:15px;transition:transform .35s var(--ease)}
-.btn-solid:hover{background:var(--green-deep);transform:translateY(-2px);box-shadow:0 14px 30px -12px rgba(22,32,16,.6)}
-.btn-solid:hover svg{transform:translateX(4px)}
-.burger{display:none;width:44px;height:44px;border-radius:999px;background:rgba(252,249,241,.6);
-  border:1px solid rgba(255,255,255,.6);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
-  flex-direction:column;align-items:center;justify-content:center;gap:6px;transition:.35s}
-.burger span{width:19px;height:2px;background:var(--ink);border-radius:2px;transition:transform .35s var(--ease),opacity .3s}
-body.menu-open .burger span:first-child{transform:translateY(4px) rotate(45deg)}
-body.menu-open .burger span:last-child{transform:translateY(-4px) rotate(-45deg)}
-
-.mega{position:absolute;top:calc(100% + 14px);left:50%;transform:translate(-50%,10px) scale(.98);
-  width:min(560px,88vw);padding:14px;border-radius:24px;opacity:0;visibility:hidden;pointer-events:none;
-  background:rgba(252,249,241,.88);border:1px solid rgba(255,255,255,.65);
-  backdrop-filter:blur(26px) saturate(1.5);-webkit-backdrop-filter:blur(26px) saturate(1.5);
-  box-shadow:0 30px 70px -24px rgba(35,38,31,.4),inset 0 1px 0 rgba(255,255,255,.7);
-  transition:opacity .3s,transform .35s var(--ease),visibility .3s}
+.mega{position:absolute;top:calc(100% + 10px);left:50%;transform:translate(-50%,8px) scale(.98);
+  width:min(540px,90vw);padding:12px;border-radius:20px;opacity:0;visibility:hidden;pointer-events:none;
+  background:var(--white);border:1px solid var(--line);box-shadow:0 24px 60px -20px rgba(17,17,17,.16);
+  transition:opacity .25s,transform .3s var(--ease),visibility .25s}
 .nav-cats.open .mega{opacity:1;visibility:visible;pointer-events:auto;transform:translate(-50%,0) scale(1)}
-.mega-title{font-size:10.5px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;
-  color:var(--sage-d);padding:8px 12px 10px}
 .mega-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px}
-.mega-item{display:flex;align-items:center;gap:12px;padding:12px;border-radius:16px;text-align:left;transition:background .25s}
-.mega-item:hover{background:rgba(255,255,255,.8)}
-.mi-num{font-family:var(--serif);font-style:italic;font-size:.95rem;color:var(--sage-d);flex:none;width:22px}
+.mega-item{display:flex;align-items:center;gap:12px;padding:11px 12px;border-radius:14px;text-align:left;transition:background .2s}
+.mega-item:hover{background:var(--line-2)}
+.mi-num{font-family:var(--serif);font-style:italic;font-size:.95rem;color:var(--gold);flex:none;width:22px}
 .mi-body{flex:1;min-width:0}
 .mi-body strong{display:block;font-size:13.5px;font-weight:700}
 .mi-body em{display:block;font-style:normal;font-size:11.5px;color:var(--ink-2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.mega-item svg{width:14px;height:14px;color:var(--sage-d);flex:none;opacity:0;transform:translateX(-4px);transition:.3s var(--ease)}
+.mega-item svg{width:13px;height:13px;color:var(--gold-d);flex:none;opacity:0;transform:translateX(-4px);transition:.25s var(--ease)}
 .mega-item:hover svg{opacity:1;transform:none}
 
-body.on-dark .brand{color:#F1EDE0}
-body.on-dark .nav-pill{background:rgba(14,20,11,.5);border-color:rgba(244,241,230,.16)}
-body.on-dark .nav-pill a,body.on-dark .cats-toggle{color:#EDEAD9}
-body.on-dark .nav-pill a:hover,body.on-dark .cats-toggle:hover{background:rgba(244,241,230,.14)}
-body.on-dark .burger{background:rgba(14,20,11,.5);border-color:rgba(244,241,230,.2)}
-body.on-dark .burger span{background:#F1EDE0}
-
-.mm{position:fixed;inset:0;z-index:1200;display:flex;flex-direction:column;padding:22px 26px 40px;
-  background:rgba(246,241,228,.94);backdrop-filter:blur(28px) saturate(1.4);-webkit-backdrop-filter:blur(28px) saturate(1.4);
-  opacity:0;visibility:hidden;pointer-events:none;transition:opacity .4s,visibility .4s;overflow-y:auto}
+/* mobile menu */
+.mm{position:fixed;inset:0;z-index:1200;display:flex;flex-direction:column;padding:20px 24px 36px;
+  background:rgba(250,250,248,.98);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+  opacity:0;visibility:hidden;pointer-events:none;transition:opacity .35s,visibility .35s;overflow-y:auto}
 body.menu-open .mm{opacity:1;visibility:visible;pointer-events:auto}
 body.menu-open{overflow:hidden}
-.mm-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:8vh}
-.mm-close{width:44px;height:44px;border-radius:999px;border:1px solid var(--line);display:grid;place-items:center;transition:background .3s}
-.mm-close:hover{background:rgba(255,255,255,.8)}
-.mm-close svg{width:18px;height:18px}
-.mm-nav{display:flex;flex-direction:column;gap:4px}
-.mm-nav a{font-family:var(--serif);font-size:2.1rem;text-decoration:none;padding:8px 4px;
-  border-bottom:1px solid var(--line);opacity:0;transform:translateY(24px);
-  transition:opacity .5s ease,transform .6s var(--ease);transition-delay:calc(var(--i)*55ms + 120ms)}
+.mm-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:7vh}
+.mm-close{width:40px;height:40px;border-radius:999px;border:1px solid var(--line);display:grid;place-items:center;transition:background .2s}
+.mm-close:hover{background:var(--white)}
+.mm-close svg{width:16px;height:16px}
+.mm-nav{display:flex;flex-direction:column;gap:2px}
+.mm-nav a{font-family:var(--serif);font-size:1.9rem;text-decoration:none;padding:8px 2px;
+  border-bottom:1px solid var(--line);opacity:0;transform:translateY(18px);
+  transition:opacity .45s ease,transform .55s var(--ease);transition-delay:calc(var(--i)*50ms + 100ms)}
 body.menu-open .mm-nav a{opacity:1;transform:none}
-.mm-nav a:hover{color:var(--sage-d)}
-.mm-cats{margin-top:6vh}
-.mm-label{font-size:10.5px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--sage-d);margin-bottom:14px}
+.mm-cats{margin-top:5vh}
+.mm-label{font-size:10.5px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-d);margin-bottom:12px}
 .mm-chips{display:flex;flex-wrap:wrap;gap:8px}
-.mm-foot{margin-top:auto;padding-top:6vh;display:flex;flex-direction:column;gap:20px}
+.mm-chip{padding:9px 14px;border-radius:999px;font-size:12.5px;font-weight:700;color:var(--ink-2);
+  background:var(--white);border:1px solid var(--line);white-space:nowrap}
+.mm-foot{margin-top:auto;padding-top:5vh;display:flex;flex-direction:column;gap:18px}
 .mm-socials{display:flex;gap:10px}
-.mm-socials a{width:46px;height:46px;border-radius:999px;border:1px solid var(--line);display:grid;place-items:center;transition:.3s}
-.mm-socials a:hover{background:var(--green);color:var(--cream);border-color:var(--green)}
-.mm-socials svg{width:20px;height:20px}
+.mm-socials a{width:44px;height:44px;border-radius:999px;border:1px solid var(--line);display:grid;place-items:center;transition:.25s}
+.mm-socials a:hover{background:var(--ink);color:var(--white)}
+.mm-socials svg{width:18px;height:18px}
 
-.scene-wrap{position:relative}
-#home{height:220vh;z-index:1}
-#philosophy{height:300vh;margin-top:-76vh;z-index:2}
-.scene{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden}
-.media{position:absolute;inset:0;transform:scale(calc(1 + var(--p,0)*.1));will-change:transform}
-.scene-2 .media{transform:scale(calc(1.12 - clamp(0, var(--p,0)*.5, .12)))}
-.media canvas,.media video,.media .media-poster{position:absolute;inset:0;width:100%;height:100%;
-  object-fit:cover;object-position:var(--obj-pos,50% 50%)}
-
-/* Living stills: slow breathing zoom + ivory scrim for headline legibility. */
-.media .media-poster{animation:kb 44s ease-in-out infinite alternate}
-@keyframes kb{from{transform:scale(1)}to{transform:scale(1.07)}}
-.scene-1 .media::after{content:"";position:absolute;inset:0;pointer-events:none;
-  background:linear-gradient(102deg,rgba(246,241,228,.5) 0%,rgba(246,241,228,.16) 36%,rgba(246,241,228,0) 60%),
-             linear-gradient(to top,rgba(22,32,16,.15),transparent 26%)}
-
-.hero-inner{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;
-  max-width:1200px;margin:0 auto;padding:110px 26px 90px;
-  transform:translateY(calc(var(--p,0)*-22vh));opacity:calc(1 - var(--p,0)*1.9);
-  filter:blur(calc(var(--p,0)*13px));will-change:transform,opacity,filter}
-.hero-eyebrow{display:flex;align-items:center;gap:12px;margin-bottom:26px}
-.hero-eyebrow::before{content:"";width:34px;height:1px;background:var(--sage-d)}
-.hero-title{font-family:var(--serif);font-weight:400;font-size:clamp(2.7rem,6.8vw,4.9rem);
-  line-height:1.02;letter-spacing:-.01em;max-width:12ch}
-.hero-sub{margin-top:24px;max-width:46ch;font-size:clamp(.98rem,1.4vw,1.12rem);color:#454a3d}
-.hero-cta{display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin-top:36px}
-.btn-ghost{display:inline-flex;align-items:center;gap:9px;padding:13px 22px;border-radius:999px;
-  font-size:13.5px;font-weight:700;text-decoration:none;color:var(--ink);
-  background:rgba(252,249,241,.5);border:1px solid rgba(255,255,255,.65);
-  backdrop-filter:blur(16px) saturate(1.4);-webkit-backdrop-filter:blur(16px) saturate(1.4);
-  box-shadow:inset 0 1px 0 rgba(255,255,255,.6);transition:transform .35s var(--ease),background .3s}
-.btn-ghost svg{width:15px;height:15px}
-.btn-ghost:hover{transform:translateY(-2px);background:rgba(252,249,241,.85)}
-.hero-trust{display:inline-flex;flex-wrap:wrap;align-items:center;gap:10px 22px;margin-top:44px;
-  padding:13px 22px;border-radius:999px;width:fit-content;max-width:100%;
-  background:rgba(252,249,241,.5);border:1px solid rgba(255,255,255,.6);
-  backdrop-filter:blur(16px) saturate(1.4);-webkit-backdrop-filter:blur(16px) saturate(1.4);
-  box-shadow:inset 0 1px 0 rgba(255,255,255,.6);
-  font-size:12.5px;font-weight:600;color:#3d4236;
-  opacity:calc(1 - var(--p,0)*3)}
-.hero-trust span{display:inline-flex;align-items:center;gap:8px;white-space:nowrap}
-.hero-trust svg{width:15px;height:15px;color:var(--sage-d);flex:none}
-.hero-trust i{width:4px;height:4px;border-radius:50%;background:var(--stone)}
-.scroll-cue{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);
-  display:flex;flex-direction:column;align-items:center;gap:10px;
-  font-size:10px;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:var(--ink-2);
-  opacity:calc(1 - var(--p,0)*4)}
-.scroll-cue .line{position:relative;width:1px;height:52px;background:rgba(35,38,31,.25);overflow:hidden}
-.scroll-cue .line::after{content:"";position:absolute;left:0;top:-14px;width:1px;height:14px;background:var(--ink);
+/* ---------- HERO — one calm image ---------- */
+.hero{position:relative;min-height:92vh;display:flex;align-items:center;overflow:hidden;
+  padding:120px clamp(20px,4vw,44px) 60px}
+.hero-media{position:absolute;inset:0}
+.hero-media img{width:100%;height:100%;object-fit:cover;object-position:var(--obj,50% 42%)}
+.hero-media::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(100deg,rgba(250,250,248,.9) 0%,rgba(250,250,248,.62) 34%,rgba(250,250,248,0) 62%)}
+.hero-inner{position:relative;z-index:2;max-width:1240px;margin:0 auto;width:100%}
+.hero-eyebrow{display:flex;align-items:center;gap:12px;margin-bottom:22px}
+.hero-eyebrow::before{content:"";width:36px;height:1px;background:var(--gold)}
+.hero-title{font-family:var(--serif);font-weight:400;font-size:clamp(2.6rem,6.2vw,4.6rem);
+  line-height:1.02;letter-spacing:-.01em;max-width:11ch}
+.hero-sub{margin-top:20px;max-width:44ch;font-size:clamp(.98rem,1.3vw,1.08rem);color:var(--ink-2)}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.btn-line{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border-radius:999px;
+  font-size:13px;font-weight:700;text-decoration:none;color:var(--ink);
+  background:var(--white);border:1px solid var(--line);transition:transform .3s var(--ease),box-shadow .3s}
+.btn-line svg{width:14px;height:14px}
+.btn-line:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(17,17,17,.08)}
+.hero-trust{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:36px;font-size:12.5px;font-weight:600;color:var(--ink-2)}
+.hero-trust span{display:inline-flex;align-items:center;gap:7px}
+.hero-trust svg{width:14px;height:14px;color:var(--gold-d)}
+.hero-trust i{width:3px;height:3px;border-radius:50%;background:var(--gold)}
+.scroll-cue{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);z-index:2;
+  display:flex;flex-direction:column;align-items:center;gap:8px;
+  font-size:10px;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:var(--ink-2)}
+.scroll-cue .line{position:relative;width:1px;height:44px;background:var(--line);overflow:hidden}
+.scroll-cue .line::after{content:"";position:absolute;left:0;top:-12px;width:1px;height:12px;background:var(--gold-d);
   animation:cue 2.2s var(--ease) infinite}
-@keyframes cue{to{transform:translateY(70px)}}
+@keyframes cue{to{transform:translateY(60px)}}
 
-.scene2-content{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:110px 26px 80px;
-  opacity:calc(1 - clamp(0, (var(--p,0) - .55)*2, 1));
-  transform:translateY(calc(var(--p,0)*-9vh));will-change:transform,opacity}
-.s2-panel{max-width:800px;padding:clamp(30px,4.5vw,52px);border-radius:30px;text-align:center;
-  background:rgba(12,18,9,.42);border:1px solid rgba(244,241,230,.15);
-  backdrop-filter:blur(24px) saturate(1.3);-webkit-backdrop-filter:blur(24px) saturate(1.3);
-  box-shadow:0 40px 90px -30px rgba(0,0,0,.5),inset 0 1px 0 rgba(244,241,230,.12)}
-.s2-panel .eyebrow{color:#AAB998}
-.s2-title{font-family:var(--serif);font-weight:400;font-size:clamp(2.2rem,5vw,3.6rem);
-  line-height:1.05;color:#F1EDE0;margin-top:16px}
-.s2-copy{margin:22px auto 0;max-width:54ch;font-size:clamp(.95rem,1.3vw,1.06rem);color:rgba(237,234,221,.82)}
-.pillar-chips{display:flex;flex-wrap:wrap;justify-content:center;gap:9px;margin-top:32px}
-.chip{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:999px;
-  font-size:12.5px;font-weight:600;color:#EDEAD9;white-space:nowrap;
-  background:rgba(244,241,230,.08);border:1px solid rgba(244,241,230,.18);transition:.3s}
-.chip em{font-family:var(--serif);font-style:italic;font-size:.85rem;color:#AAB998}
-.chip:hover{background:rgba(244,241,230,.18);transform:translateY(-2px)}
-.btn-ivory{display:inline-flex;align-items:center;gap:9px;margin-top:34px;padding:13px 24px;
-  border-radius:999px;font-size:13.5px;font-weight:700;text-decoration:none;color:#F1EDE0;
-  background:rgba(244,241,230,.13);border:1px solid rgba(244,241,230,.32);transition:.35s var(--ease)}
-.btn-ivory svg{width:15px;height:15px;transition:transform .35s var(--ease)}
-.btn-ivory:hover{background:rgba(244,241,230,.24);transform:translateY(-2px)}
-.btn-ivory:hover svg{transform:translateX(4px)}
+/* ---------- SECTIONS ---------- */
+.section{padding:clamp(72px,9vw,120px) 0}
+.wrap{max-width:1240px;margin:0 auto;padding:0 clamp(20px,4vw,44px)}
+.sec-head{margin-bottom:clamp(36px,5vw,56px);max-width:640px}
+.sec-title{font-family:var(--serif);font-weight:400;font-size:clamp(1.9rem,4vw,2.9rem);
+  line-height:1.06;letter-spacing:-.01em;margin-top:14px}
+.sec-sub{margin-top:14px;color:var(--ink-2);font-size:1rem;max-width:50ch}
 
-.page{position:relative;z-index:5;margin-top:-72vh;background:var(--ivory);
-  border-radius:44px 44px 0 0;box-shadow:0 -36px 90px rgba(12,18,9,.4);overflow:hidden}
-
-.section{padding:clamp(88px,11vw,150px) 0;position:relative}
-.wrap{max-width:1200px;margin:0 auto;padding:0 clamp(20px,4vw,44px);position:relative}
-.sec-head{margin-bottom:clamp(44px,6vw,72px);max-width:720px}
-.sec-title{font-family:var(--serif);font-weight:400;font-size:clamp(2.1rem,4.6vw,3.3rem);
-  line-height:1.04;letter-spacing:-.01em;margin-top:18px}
-.sec-sub{margin-top:18px;color:var(--ink-2);font-size:1.02rem;max-width:52ch}
-
-.about-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(40px,6vw,90px);align-items:start}
-.about-lede{font-family:var(--serif);font-size:clamp(1.35rem,2.2vw,1.7rem);line-height:1.4;color:#31352b}
-.about-copy p{color:var(--ink-2);font-size:1rem}
-.about-copy p + p{margin-top:18px}
-.principles{list-style:none;margin-top:34px;border-top:1px solid var(--line)}
-.principles li{display:flex;align-items:baseline;gap:16px;padding:16px 4px;border-bottom:1px solid var(--line)}
-.principles b{font-family:var(--serif);font-weight:400;font-size:1.12rem}
-.principles span{color:var(--ink-2);font-size:.88rem}
-.principles em{font-family:var(--serif);font-style:italic;color:var(--sage-d);flex:none;width:20px}
-.signature{margin-top:30px;font-family:var(--serif);font-style:italic;font-size:1.25rem;color:var(--green)}
-.stats{display:flex;flex-wrap:wrap;gap:0;margin-top:clamp(56px,8vw,90px);border-top:1px solid var(--line)}
-.stat{flex:1 1 200px;padding:30px 26px 6px;border-left:1px solid var(--line)}
+/* about */
+.about-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(36px,6vw,80px);align-items:start}
+.about-lede{font-family:var(--serif);font-size:clamp(1.3rem,2vw,1.6rem);line-height:1.4;color:#1e1e1c}
+.about-copy p{color:var(--ink-2);font-size:.98rem}
+.about-copy p + p{margin-top:16px}
+.principles{list-style:none;margin-top:28px;border-top:1px solid var(--line)}
+.principles li{display:flex;align-items:baseline;gap:14px;padding:14px 2px;border-bottom:1px solid var(--line)}
+.principles b{font-family:var(--serif);font-weight:400;font-size:1.08rem}
+.principles span{color:var(--ink-2);font-size:.86rem}
+.principles em{font-family:var(--serif);font-style:italic;color:var(--gold);flex:none;width:18px}
+.signature{margin-top:24px;font-family:var(--serif);font-style:italic;font-size:1.2rem;color:var(--ink)}
+.stats{display:flex;flex-wrap:wrap;margin-top:clamp(44px,6vw,64px);border-top:1px solid var(--line)}
+.stat{flex:1 1 190px;padding:24px 22px 4px;border-left:1px solid var(--line)}
 .stat:first-child{border-left:0;padding-left:0}
-.stat-n{font-family:var(--serif);font-size:clamp(2.2rem,3.6vw,3rem);line-height:1;color:var(--green)}
-.stat-l{display:block;margin-top:8px;font-size:12.5px;font-weight:600;letter-spacing:.08em;
+.stat-n{font-family:var(--serif);font-size:clamp(2rem,3.2vw,2.7rem);line-height:1;color:var(--ink)}
+.stat-l{display:block;margin-top:6px;font-size:11.5px;font-weight:600;letter-spacing:.1em;
   text-transform:uppercase;color:var(--ink-2)}
 
-.cat-row{position:relative;display:grid;grid-template-columns:46px 1.05fr 1.5fr auto 30px;gap:20px;
-  align-items:center;width:100%;padding:27px 18px;text-align:left;
-  border-top:1px solid var(--line);transition:padding .35s var(--ease)}
+/* pillars rows */
+.cat-row{position:relative;display:grid;grid-template-columns:40px 1.05fr 1.5fr auto 26px;gap:18px;
+  align-items:center;width:100%;padding:22px 14px;text-align:left;
+  border-top:1px solid var(--line);transition:background .25s}
 .cat-row:last-of-type{border-bottom:1px solid var(--line)}
-.cat-row::before{content:"";position:absolute;inset:5px -4px;border-radius:20px;
-  background:rgba(252,249,241,.85);box-shadow:inset 0 1px 0 rgba(255,255,255,.8);
-  opacity:0;transform:scaleX(.97);transition:opacity .4s,transform .45s var(--ease);z-index:-1}
-.cat-row:hover::before{opacity:1;transform:none}
-.cat-ico{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;
-  border:1px solid var(--line);color:var(--sage-d);background:rgba(255,255,255,.4);transition:.35s}
-.cat-ico svg{width:21px;height:21px}
-.cat-row:hover .cat-ico{background:var(--green);color:var(--cream);border-color:var(--green)}
-.cat-name{font-family:var(--serif);font-size:clamp(1.25rem,2vw,1.62rem);line-height:1.15;transition:transform .4s var(--ease)}
-.cat-name em{font-style:italic;font-size:.85rem;color:var(--sage-d);margin-right:10px}
-.cat-row:hover .cat-name{transform:translateX(6px)}
-.cat-tag{font-size:13.5px;color:var(--ink-2)}
-.cat-count{font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
-  color:var(--sage-d);border:1px solid var(--line);padding:6px 12px;border-radius:999px;white-space:nowrap}
-.cat-arrow{color:var(--sage-d);transition:transform .4s var(--ease),color .3s}
-.cat-arrow svg{width:19px;height:19px}
-.cat-row:hover .cat-arrow{transform:translateX(6px);color:var(--green)}
+.cat-row:hover{background:var(--white)}
+.cat-ico{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;
+  border:1px solid var(--line);color:var(--gold-d);background:var(--white);transition:.25s}
+.cat-ico svg{width:18px;height:18px}
+.cat-row:hover .cat-ico{background:var(--ink);color:var(--white);border-color:var(--ink)}
+.cat-name{font-family:var(--serif);font-size:clamp(1.2rem,1.8vw,1.5rem);line-height:1.15}
+.cat-name em{font-style:italic;font-size:.82rem;color:var(--gold-d);margin-right:9px}
+.cat-tag{font-size:13px;color:var(--ink-2)}
+.cat-count{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--gold-d);border:1px solid var(--line);padding:5px 11px;border-radius:999px;white-space:nowrap}
+.cat-arrow{color:var(--ink-2);transition:transform .3s var(--ease)}
+.cat-arrow svg{width:17px;height:17px}
+.cat-row:hover .cat-arrow{transform:translateX(5px);color:var(--gold-d)}
 
-.featured-grid{display:grid;grid-template-columns:1.12fr .88fr;gap:22px;align-items:stretch}
-.feat-main{position:relative;display:grid;grid-template-columns:48% 1fr;border-radius:26px;overflow:hidden;
-  text-decoration:none;background:rgba(252,249,241,.75);border:1px solid rgba(255,255,255,.7);
-  box-shadow:0 18px 50px -26px rgba(35,38,31,.35),inset 0 1px 0 rgba(255,255,255,.7);
-  transition:transform .5s var(--ease),box-shadow .5s}
-.feat-main:hover{transform:translateY(-6px);box-shadow:0 34px 70px -30px rgba(35,38,31,.45),inset 0 1px 0 rgba(255,255,255,.7)}
-.feat-art{position:relative;background:var(--sand);overflow:hidden;min-height:320px}
-.feat-art svg{width:100%;height:100%;object-fit:cover;transition:transform .9s var(--ease)}
-.feat-sm-art svg{width:100%;height:100%;transition:transform .8s var(--ease)}
-.feat-art img{width:100%;height:100%;object-fit:cover;transition:transform .9s var(--ease)}
-.feat-sm-art img{width:100%;height:100%;object-fit:contain;padding:4%;background:var(--sand);transition:transform .8s var(--ease)}
-.feat-main:hover .feat-art svg,.feat-main:hover .feat-art img{transform:scale(1.045)}
-.feat-body{padding:clamp(26px,3vw,42px);display:flex;flex-direction:column;align-items:flex-start}
-.feat-name{font-family:var(--serif);font-size:clamp(1.5rem,2.4vw,2rem);line-height:1.1;margin-top:12px}
-.feat-note{margin-top:16px;font-family:var(--serif);font-style:italic;font-size:1.02rem;color:var(--sage-d);line-height:1.45}
-.feat-body .card-foot{margin-top:auto;padding-top:22px}
-.feat-side{display:flex;flex-direction:column;gap:22px}
-.feat-sm{position:relative;display:grid;grid-template-columns:138px 1fr;gap:20px;align-items:center;
-  flex:1;padding:18px;border-radius:24px;text-decoration:none;overflow:hidden;
-  background:rgba(252,249,241,.7);border:1px solid rgba(255,255,255,.7);
-  box-shadow:0 14px 40px -24px rgba(35,38,31,.3),inset 0 1px 0 rgba(255,255,255,.7);
-  transition:transform .5s var(--ease),box-shadow .5s}
-.feat-sm:hover{transform:translateY(-5px);box-shadow:0 28px 56px -26px rgba(35,38,31,.42),inset 0 1px 0 rgba(255,255,255,.7)}
-.feat-sm-art{position:relative;aspect-ratio:1;border-radius:16px;overflow:hidden;background:var(--sand)}
-.feat-sm:hover .feat-sm-art svg,.feat-sm:hover .feat-sm-art img{transform:scale(1.05)}
-.feat-sm-body{display:flex;flex-direction:column;align-items:flex-start;min-width:0}
-.feat-sm-body h3{font-family:var(--serif);font-size:1.3rem;line-height:1.12;margin-top:8px}
-.feat-sm-body .card-foot{margin-top:14px}
-
-.pills{display:flex;flex-wrap:wrap;gap:8px;margin:34px 0 12px}
-.pill{padding:11px 19px;border-radius:999px;font-size:13px;font-weight:700;color:var(--ink-2);white-space:nowrap;
-  background:rgba(252,249,241,.62);border:1px solid rgba(255,255,255,.75);
-  backdrop-filter:blur(12px) saturate(1.3);-webkit-backdrop-filter:blur(12px) saturate(1.3);
-  transition:background .3s,color .3s,transform .3s var(--ease)}
-.pill:not(.on):hover{background:rgba(255,255,255,.95);color:var(--ink);transform:translateY(-1px)}
-.pill.on{background:var(--green);color:#F1EDDE;border-color:var(--green)}
-.grid-count{font-size:13px;color:var(--ink-2);margin-bottom:26px}
+/* ---------- PRODUCTS ---------- */
+.pills{display:flex;flex-wrap:wrap;gap:7px;margin:30px 0 10px}
+.pill{padding:10px 17px;border-radius:999px;font-size:12.5px;font-weight:700;color:var(--ink-2);white-space:nowrap;
+  background:var(--white);border:1px solid var(--line);
+  transition:border-color .25s,color .25s,background .25s}
+.pill:not(.on):hover{border-color:var(--ink);color:var(--ink)}
+.pill.on{background:var(--ink);color:var(--white);border-color:var(--ink)}
+.grid-count{font-size:12.5px;color:var(--ink-2);margin-bottom:22px}
 .grid-count strong{color:var(--ink)}
-.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;transition:height .5s var(--ease)}
-.card{position:relative;display:flex;flex-direction:column;border-radius:22px;overflow:hidden;
-  text-decoration:none;background:rgba(252,249,241,.75);border:1px solid rgba(255,255,255,.7);
-  box-shadow:0 12px 34px -22px rgba(35,38,31,.28),inset 0 1px 0 rgba(255,255,255,.7);
-  transition:transform .5s var(--ease),box-shadow .5s,opacity .45s ease;
-  opacity:0;transform:translateY(26px) scale(.97)}
-.grid.on .card{opacity:1;transform:none;transition-delay:calc(var(--i)*32ms)}
-.card:hover{transform:translateY(-6px);box-shadow:0 30px 60px -26px rgba(35,38,31,.4),inset 0 1px 0 rgba(255,255,255,.7)}
-.card::after{content:"";position:absolute;top:0;left:-70%;width:34%;height:100%;
-  background:rgba(255,255,255,.32);transform:skewX(-16deg);pointer-events:none;transition:left .8s var(--ease)}
-.card:hover::after{left:130%}
-.card-art{position:relative;aspect-ratio:1;background:var(--sand);overflow:hidden}
-.card-art svg{width:100%;height:100%;object-fit:cover;transition:transform .85s var(--ease)}
-.card-art img{width:100%;height:100%;object-fit:contain;padding:6%;background:var(--sand);transition:transform .85s var(--ease)}
-.card:hover .card-art svg,.card:hover .card-art img{transform:scale(1.05)}
-.badge{position:absolute;top:12px;left:12px;z-index:2;padding:5px 11px;border-radius:999px;
-  font-size:9.5px;font-weight:800;letter-spacing:.13em;text-transform:uppercase}
-.badge-best{background:var(--green);color:#F1EDDE}
-.badge-demand{background:var(--clay);color:#FBF5EC}
-.badge-popular{background:rgba(252,249,241,.9);color:var(--green);border:1px solid rgba(38,53,33,.3)}
-.badge-deal{background:rgba(35,38,31,.88);color:#F1EDDE}
-.card-body{display:flex;flex-direction:column;gap:7px;padding:18px 20px 20px;flex:1}
-.card-cat{font-size:9.5px;font-weight:800;letter-spacing:.17em;text-transform:uppercase;color:var(--sage-d)}
-.card-name{font-family:var(--serif);font-weight:400;font-size:1.32rem;line-height:1.12}
-.card-desc{font-size:12.5px;color:var(--ink-2);display:-webkit-box;-webkit-line-clamp:2;
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.card{position:relative;display:flex;flex-direction:column;border-radius:18px;overflow:hidden;
+  text-decoration:none;background:var(--white);border:1px solid var(--line);
+  transition:transform .45s var(--ease),box-shadow .45s,opacity .4s ease;
+  opacity:0;transform:translateY(22px)}
+.grid.on .card{opacity:1;transform:none;transition-delay:calc(var(--i)*30ms)}
+.card:hover{transform:translateY(-5px);box-shadow:0 20px 44px -18px rgba(17,17,17,.14)}
+.card-art{position:relative;aspect-ratio:1;background:var(--bg);overflow:hidden}
+.card-art img{width:100%;height:100%;object-fit:contain;padding:8%;background:var(--bg);transition:transform .8s var(--ease)}
+.card:hover .card-art img{transform:scale(1.04)}
+.badge{position:absolute;top:11px;left:11px;z-index:2;padding:4px 10px;border-radius:999px;
+  font-size:9px;font-weight:800;letter-spacing:.13em;text-transform:uppercase}
+.badge-best{background:var(--ink);color:var(--white)}
+.badge-demand{background:var(--gold);color:var(--white)}
+.badge-popular{background:var(--white);color:var(--ink);border:1px solid var(--line)}
+.badge-deal{background:#3d3d39;color:var(--white)}
+.card-body{display:flex;flex-direction:column;gap:6px;padding:16px 18px 18px;flex:1}
+.card-cat{font-size:9px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-d)}
+.card-name{font-family:var(--serif);font-weight:400;font-size:1.24rem;line-height:1.14}
+.card-desc{font-size:12px;color:var(--ink-2);display:-webkit-box;-webkit-line-clamp:2;
   -webkit-box-orient:vertical;overflow:hidden}
-.card-foot{margin-top:auto;padding-top:14px;display:flex;align-items:center;justify-content:space-between;gap:10px;
-  border-top:1px solid var(--line)}
-.card-price{font-size:15px;font-weight:800;letter-spacing:.01em}
-.card-cta{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:700;color:var(--green)}
-.card-cta svg{width:14px;height:14px;transition:transform .35s var(--ease)}
-.card:hover .card-cta svg,.feat-main:hover .card-cta svg,.feat-sm:hover .card-cta svg{transform:translateX(4px)}
-.grid-empty{grid-column:1/-1;text-align:center;padding:70px 24px;border-radius:24px;
-  border:1px dashed rgba(35,38,31,.25);background:rgba(252,249,241,.5)}
-.grid-empty .empty-ico{width:58px;height:58px;margin:0 auto 20px;border-radius:18px;display:grid;place-items:center;
-  border:1px solid var(--line);color:var(--sage-d)}
-.grid-empty .empty-ico svg{width:26px;height:26px}
-.grid-empty h3{font-family:var(--serif);font-size:1.6rem;font-weight:400}
-.grid-empty p{max-width:46ch;margin:12px auto 26px;color:var(--ink-2);font-size:.95rem}
-.empty-actions{display:flex;justify-content:center;flex-wrap:wrap;gap:10px}
-.empty-actions button{padding:11px 19px;border-radius:999px;border:1px solid rgba(38,53,33,.3);
-  font-size:12.5px;font-weight:700;transition:.3s}
-.empty-actions button:hover{background:var(--green);color:var(--cream);border-color:var(--green)}
+.card-foot{margin-top:auto;padding-top:12px;display:flex;align-items:center;justify-content:space-between;gap:10px;
+  border-top:1px solid var(--line-2)}
+.card-price{font-size:14.5px;font-weight:800}
+.card-cta{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;color:var(--gold-d)}
+.card-cta svg{width:13px;height:13px;transition:transform .3s var(--ease)}
+.card:hover .card-cta svg{transform:translateX(3px)}
+.grid-empty{grid-column:1/-1;text-align:center;padding:56px 24px;border-radius:18px;
+  border:1px dashed var(--line);background:var(--white)}
+.grid-empty .empty-ico{width:52px;height:52px;margin:0 auto 16px;border-radius:16px;display:grid;place-items:center;
+  border:1px solid var(--line);color:var(--gold-d)}
+.grid-empty .empty-ico svg{width:24px;height:24px}
+.grid-empty h3{font-family:var(--serif);font-size:1.5rem;font-weight:400}
+.grid-empty p{max-width:44ch;margin:10px auto 20px;color:var(--ink-2);font-size:.92rem}
+.empty-actions{display:flex;justify-content:center;flex-wrap:wrap;gap:9px}
+.empty-actions button{padding:10px 17px;border-radius:999px;border:1px solid var(--line);
+  font-size:12px;font-weight:700;transition:.25s}
+.empty-actions button:hover{background:var(--ink);color:var(--white);border-color:var(--ink)}
 
-.social-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
-.soc{position:relative;display:flex;flex-direction:column;align-items:flex-start;gap:6px;
-  padding:clamp(28px,3.4vw,40px);border-radius:26px;overflow:hidden;text-decoration:none;
-  background:rgba(252,249,241,.75);border:1px solid rgba(255,255,255,.7);
-  box-shadow:0 16px 44px -26px rgba(35,38,31,.32),inset 0 1px 0 rgba(255,255,255,.7);
-  transition:transform .5s var(--ease),box-shadow .5s}
-.soc:hover{transform:translateY(-6px);box-shadow:0 32px 64px -28px rgba(35,38,31,.44),inset 0 1px 0 rgba(255,255,255,.7)}
-.soc::after{content:"";position:absolute;top:0;left:-70%;width:32%;height:100%;
-  background:rgba(255,255,255,.3);transform:skewX(-16deg);pointer-events:none;transition:left .8s var(--ease)}
-.soc:hover::after{left:132%}
-.soc-ico{width:64px;height:64px;border-radius:20px;display:grid;place-items:center;margin-bottom:16px;
-  background:rgba(255,255,255,.6);border:1px solid rgba(255,255,255,.8);color:var(--green);
-  transition:transform .55s var(--ease),background .35s,color .35s}
+/* story — one wide image */
+.story-img{position:relative;margin:clamp(36px,5vw,52px) auto 0;max-width:920px;border-radius:20px;
+  overflow:hidden;aspect-ratio:16/10;border:1px solid var(--line)}
+.story-img img{width:100%;height:100%;object-fit:cover;object-position:50% 42%;transition:transform .8s var(--ease)}
+.story-img:hover img{transform:scale(1.03)}
+.story-cap{position:absolute;left:14px;bottom:14px;padding:7px 13px;border-radius:999px;
+  font-size:10.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--white);
+  background:rgba(17,17,17,.6);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+
+/* social — single centered card */
+.social-grid{display:grid;grid-template-columns:1fr;gap:18px;max-width:620px;margin-left:auto;margin-right:auto}
+.soc{position:relative;display:flex;flex-direction:column;align-items:flex-start;gap:5px;
+  padding:clamp(24px,3vw,34px);border-radius:20px;text-decoration:none;
+  background:var(--white);border:1px solid var(--line);
+  transition:transform .45s var(--ease),box-shadow .45s}
+.soc:hover{transform:translateY(-4px);box-shadow:0 18px 40px -18px rgba(17,17,17,.14)}
+.soc-ico{width:64px;height:64px;border-radius:18px;display:grid;place-items:center;margin-bottom:14px;
+  background:var(--bg);border:1px solid var(--line);color:var(--ink);
+  transition:transform .5s var(--ease),background .3s,color .3s}
 .soc-ico svg{width:26px;height:26px}
-.soc:hover .soc-ico{transform:rotate(-7deg) scale(1.07);background:var(--green);color:#F1EDDE}
-.soc-name{font-family:var(--serif);font-size:1.65rem;line-height:1}
-.soc-handle{font-size:12.5px;font-weight:700;color:var(--sage-d)}
-.soc-blurb{margin-top:10px;font-size:14px;color:var(--ink-2);max-width:38ch}
-.soc-follow{display:inline-flex;align-items:center;gap:8px;margin-top:18px;
-  font-size:12.5px;font-weight:700;color:var(--green)}
-.soc-follow svg{width:14px;height:14px;transition:transform .35s var(--ease)}
-.soc:hover .soc-follow svg{transform:translateX(4px)}
+.soc-logo{width:64%;height:64%;object-fit:contain;transition:transform .5s var(--ease)}
+.soc:hover .soc-ico{transform:rotate(-4deg) scale(1.04)}
+.soc:hover .soc-logo{transform:scale(1.1)}
+.soc-name{font-family:var(--serif);font-size:1.6rem;line-height:1}
+.soc-handle{font-size:12px;font-weight:700;color:var(--gold-d)}
+.soc-blurb{margin-top:8px;font-size:13.5px;color:var(--ink-2);max-width:40ch}
+.soc-follow{display:inline-flex;align-items:center;gap:7px;margin-top:14px;
+  font-size:12px;font-weight:700;color:var(--gold-d)}
+.soc-follow svg{width:13px;height:13px;transition:transform .3s var(--ease)}
+.soc:hover .soc-follow svg{transform:translateX(3px)}
 
-.contact-panel{max-width:680px;margin:0 auto;text-align:center;padding:clamp(36px,5vw,60px);
-  border-radius:28px;background:rgba(252,249,241,.75);border:1px solid rgba(255,255,255,.75);
-  backdrop-filter:blur(18px) saturate(1.3);-webkit-backdrop-filter:blur(18px) saturate(1.3);
-  box-shadow:0 24px 60px -30px rgba(35,38,31,.35),inset 0 1px 0 rgba(255,255,255,.7)}
-.contact-panel .sec-title{margin-top:16px}
-.contact-panel p{margin:16px auto 28px;color:var(--ink-2);max-width:44ch}
-.contact-mail{display:inline-flex;align-items:center;gap:10px;padding:14px 26px;border-radius:999px;
-  text-decoration:none;font-size:14px;font-weight:700;background:var(--green);color:#F3EFE3;
-  transition:background .3s,transform .35s var(--ease)}
-.contact-mail svg{width:16px;height:16px}
-.contact-mail:hover{background:var(--green-deep);transform:translateY(-2px)}
-.contact-note{margin-top:18px;font-size:12px;color:var(--ink-2)}
-.contact-note a{color:var(--green);font-weight:700;text-decoration:none}
-.contact-note a:hover{text-decoration:underline}
+/* contact */
+.contact-panel{max-width:640px;margin:0 auto;text-align:center;padding:clamp(32px,5vw,52px);
+  border-radius:24px;background:var(--white);border:1px solid var(--line)}
+.contact-panel .sec-title{margin-top:12px}
+.contact-panel p{margin:14px auto 24px;color:var(--ink-2);max-width:42ch}
+.contact-mail{display:inline-flex;align-items:center;gap:9px;padding:13px 24px;border-radius:999px;
+  text-decoration:none;font-size:13.5px;font-weight:700;background:var(--ink);color:var(--white);
+  transition:transform .3s var(--ease),box-shadow .3s}
+.contact-mail svg{width:15px;height:15px}
+.contact-mail:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(17,17,17,.18)}
+.contact-note{margin-top:14px;font-size:11.5px;color:var(--ink-2)}
 
-.footer{background:var(--green-deep);color:rgba(233,229,214,.72);padding:78px 0 34px;position:relative}
-.footer-grid{display:grid;grid-template-columns:2fr 1fr 1.3fr 1.2fr;gap:44px}
-.footer .brand{color:#F1EDE0;margin-bottom:16px}
-.footer-mission{font-family:var(--serif);font-size:1.28rem;line-height:1.4;color:#EDEAD9;max-width:26ch}
-.footer-socials{display:flex;gap:10px;margin-top:24px}
-.footer-socials a{width:44px;height:44px;border-radius:999px;display:grid;place-items:center;
-  border:1px solid rgba(244,241,230,.2);color:#EDEAD9;transition:.3s}
-.footer-socials a:hover{background:#EDEAD9;color:var(--green-deep);transform:translateY(-3px)}
-.footer-socials svg{width:19px;height:19px}
+/* footer */
+.footer{background:var(--ink);color:rgba(255,255,255,.72);padding:64px 0 30px}
+.footer .brand{color:var(--white);margin-bottom:14px}
+.footer .brand .mono{color:var(--white)}
+.footer-mission{font-family:var(--serif);font-size:1.22rem;line-height:1.4;color:rgba(255,255,255,.88);max-width:24ch}
+.footer-socials{display:flex;gap:9px;margin-top:20px}
+.footer-socials a{width:40px;height:40px;border-radius:999px;display:grid;place-items:center;
+  border:1px solid rgba(255,255,255,.22);color:rgba(255,255,255,.85);transition:.25s}
+.footer-socials a:hover{background:var(--white);color:var(--ink)}
+.footer-socials svg{width:17px;height:17px}
+.footer-socials img{width:58%;height:58%;object-fit:contain}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1.2fr 1.1fr;gap:40px}
 .footer h4{font-size:10.5px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;
-  color:#AAB998;margin-bottom:20px}
-.footer ul{list-style:none;display:flex;flex-direction:column;gap:11px}
-.footer a,.footer .fcat{font-size:14px;color:rgba(233,229,214,.72);text-decoration:none;transition:color .25s;padding:0;text-align:left}
-.footer a:hover,.footer .fcat:hover{color:#F1EDE0}
+  color:var(--gold);margin-bottom:18px}
+.footer ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+.footer a,.footer .fcat{font-size:13.5px;color:rgba(255,255,255,.72);text-decoration:none;transition:color .2s;padding:0;text-align:left}
+.footer a:hover,.footer .fcat:hover{color:var(--white)}
 .fcat{display:block;width:fit-content}
-.footer-bottom{margin-top:60px;padding-top:26px;border-top:1px solid rgba(244,241,230,.14);
-  display:flex;flex-wrap:wrap;gap:14px 30px;justify-content:space-between;align-items:flex-start}
-.footer-disc{max-width:70ch;font-size:11.5px;line-height:1.7;color:rgba(233,229,214,.5)}
-.footer-copy{font-size:12px;color:rgba(233,229,214,.55);white-space:nowrap}
+.footer-bottom{margin-top:48px;padding-top:22px;border-top:1px solid rgba(255,255,255,.14);
+  display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-between;align-items:flex-start}
+.footer-disc{max-width:66ch;font-size:11px;line-height:1.7;color:rgba(255,255,255,.45)}
+.footer-copy{font-size:11.5px;color:rgba(255,255,255,.5);white-space:nowrap}
 
-[data-reveal]{opacity:0;transform:translateY(34px);filter:blur(10px);
-  transition:opacity .8s ease,transform .95s var(--ease),filter .9s ease;transition-delay:var(--d,0ms)}
+/* reveals */
+[data-reveal]{opacity:0;transform:translateY(26px);filter:blur(8px);
+  transition:opacity .7s ease,transform .8s var(--ease),filter .7s ease;transition-delay:var(--d,0ms)}
 [data-reveal].in{opacity:1;transform:none;filter:none}
-[data-blur-text] .w{display:inline-block;opacity:0;transform:translateY(26px);filter:blur(12px);
-  transition:opacity .7s ease,transform .9s var(--ease),filter .9s ease;
-  transition-delay:calc(var(--i)*95ms)}
+[data-blur-text] .w{display:inline-block;opacity:0;transform:translateY(20px);filter:blur(10px);
+  transition:opacity .6s ease,transform .8s var(--ease),filter .7s ease;
+  transition-delay:calc(var(--i)*85ms)}
 [data-blur-text].in .w{opacity:1;transform:none;filter:blur(0)}
-/* Closing story gallery */
-.story-pair{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:clamp(44px,6vw,72px)}
-.story-img{position:relative;margin:0;border-radius:26px;overflow:hidden;aspect-ratio:4/3;
-  box-shadow:0 18px 50px -26px rgba(35,38,31,.35)}
-.story-img img{width:100%;height:100%;object-fit:cover;object-position:50% 45%;transition:transform .9s var(--ease)}
-.story-img:hover img{transform:scale(1.04)}
-.story-cap{position:absolute;left:14px;bottom:14px;padding:8px 14px;border-radius:999px;
-  font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#F1EDE0;
-  background:rgba(12,18,9,.55);border:1px solid rgba(244,241,230,.25);
-  backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
-@media(max-width:700px){.story-pair{grid-template-columns:1fr}}
 
-@media(max-width:1104px){.grid{grid-template-columns:repeat(3,1fr)}}
-@media(max-width:960px){
-  .nav-pill,.nav-right .btn-solid{display:none}
+@media(max-width:1000px){.grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:920px){
+  .nav-links,.nav-cats,.nav-right .btn-dark{display:none}
   .burger{display:flex}
-  .about-grid{grid-template-columns:1fr;gap:44px}
-  .featured-grid{grid-template-columns:1fr}
-  .feat-main{grid-template-columns:1fr}
-  .feat-art{min-height:0;aspect-ratio:1}
-  .social-grid{grid-template-columns:1fr}
-  .footer-grid{grid-template-columns:1fr 1fr;gap:36px}
+  .about-grid{grid-template-columns:1fr;gap:36px}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:32px}
 }
-@media(max-width:860px){
-  .cat-row{grid-template-columns:46px 1fr 26px;grid-template-areas:"ico name arrow" "tag tag tag";row-gap:10px;padding:22px 6px}
+@media(max-width:820px){
+  .cat-row{grid-template-columns:40px 1fr 22px;grid-template-areas:"ico name arrow" "tag tag tag";row-gap:8px;padding:18px 4px}
   .cat-ico{grid-area:ico}.cat-name{grid-area:name}.cat-tag{grid-area:tag}
   .cat-arrow{grid-area:arrow}.cat-count{display:none}
+  .story-img{aspect-ratio:4/3}
 }
-@media(max-width:700px){
-  .grid{grid-template-columns:repeat(2,1fr);gap:14px}
-  .card-name{font-size:1.12rem}
+@media(max-width:680px){
+  .grid{grid-template-columns:repeat(2,1fr);gap:12px}
+  .card-name{font-size:1.05rem}
   .card-desc{display:none}
-  .pills{flex-wrap:nowrap;overflow-x:auto;margin:26px -20px 10px;padding:6px 20px;scrollbar-width:none}
+  .card-body{padding:13px 14px 15px}
+  .pills{flex-wrap:nowrap;overflow-x:auto;margin:24px -20px 8px;padding:5px 20px;scrollbar-width:none}
   .pills::-webkit-scrollbar{display:none}
-  .hero-trust{gap:8px 14px;padding:11px 16px;font-size:11.5px}
+  .hero{min-height:88vh;padding-top:104px}
+  .hero-trust{gap:7px 12px;font-size:11.5px}
   .hero-trust i{display:none}
+  .hero-media img{object-position:var(--obj-m,52% 38%)}
+  .hero-media::after{background:linear-gradient(180deg,rgba(250,250,248,.5) 0%,rgba(250,250,248,.25) 30%,rgba(250,250,248,.85) 100%)}
+  .hero-inner{display:flex;flex-direction:column;justify-content:flex-end;min-height:inherit}
 }
-@media(max-width:460px){
+@media(max-width:440px){
   .grid{grid-template-columns:1fr}
-  .brand span{font-size:1.1rem}
+  .brand span{font-size:1.25rem}
   .footer-grid{grid-template-columns:1fr}
 }
 @media(prefers-reduced-motion:reduce){
@@ -458,34 +352,23 @@ body.menu-open .mm-nav a{opacity:1;transform:none}
 </head>
 <body>
 <a class="skip" href="#products">Skip to the collection</a>
-<div class="grain" aria-hidden="true"></div>
-
-<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
-  <filter id="f2"><feGaussianBlur stdDeviation="2"/></filter>
-  <filter id="f4"><feGaussianBlur stdDeviation="4"/></filter>
-  <filter id="f6"><feGaussianBlur stdDeviation="6"/></filter>
-  <filter id="f9"><feGaussianBlur stdDeviation="9"/></filter>
-</defs></svg>
 
 <header class="nav" id="nav">
   <div class="nav-inner">
     <a class="brand" href="#home" aria-label="VAYRON — home">
       <svg class="mono" viewBox="0 0 40 40" aria-hidden="true">
-        <circle cx="20" cy="20" r="18.5" fill="none" stroke="currentColor" stroke-width="1.5"/>
-        <path d="M12.5 26 20 12l7.5 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M15.8 21.5h8.4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        <circle cx="20" cy="20" r="18.5" fill="none" stroke="currentColor" stroke-width="1.4"/>
+        <path d="M12.5 26 20 12l7.5 14" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
       <span>VAYRON</span>
     </a>
-    <nav class="nav-pill" aria-label="Primary">
-      <a href="#home">Home</a>
+    <nav class="nav-links" aria-label="Primary">
       <a href="#about">About</a>
       <div class="nav-cats" id="navCats">
         <button class="cats-toggle" id="catsToggle" aria-expanded="false" aria-haspopup="true">Categories
           <svg class="caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
         </button>
         <div class="mega" id="mega">
-          <p class="mega-title">The six pillars</p>
           <div class="mega-grid" id="megaGrid"></div>
         </div>
       </div>
@@ -493,7 +376,7 @@ body.menu-open .mm-nav a{opacity:1;transform:none}
       <a href="#contact">Contact</a>
     </nav>
     <div class="nav-right">
-      <a class="btn-solid" href="#products">Explore Products
+      <a class="btn-dark" href="#products">Shop now
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15"/><path d="M13 6l6 6-6 6"/></svg>
       </a>
       <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
@@ -505,9 +388,8 @@ body.menu-open .mm-nav a{opacity:1;transform:none}
   <div class="mm-head">
     <span class="brand">
       <svg class="mono" viewBox="0 0 40 40" aria-hidden="true">
-        <circle cx="20" cy="20" r="18.5" fill="none" stroke="currentColor" stroke-width="1.5"/>
-        <path d="M12.5 26 20 12l7.5 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M15.8 21.5h8.4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        <circle cx="20" cy="20" r="18.5" fill="none" stroke="currentColor" stroke-width="1.4"/>
+        <path d="M12.5 26 20 12l7.5 14" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
       <span>VAYRON</span>
     </span>
@@ -518,9 +400,8 @@ body.menu-open .mm-nav a{opacity:1;transform:none}
   <nav class="mm-nav" aria-label="Mobile">
     <a href="#home" style="--i:0">Home</a>
     <a href="#about" style="--i:1">About</a>
-    <a href="#featured" style="--i:2">Featured</a>
-    <a href="#products" style="--i:3">Products</a>
-    <a href="#contact" style="--i:4">Contact</a>
+    <a href="#products" style="--i:2">Products</a>
+    <a href="#contact" style="--i:3">Contact</a>
   </nav>
   <div class="mm-cats">
     <p class="mm-label">The six pillars</p>
@@ -528,218 +409,174 @@ body.menu-open .mm-nav a{opacity:1;transform:none}
   </div>
   <div class="mm-foot">
     <div class="mm-socials" id="mmSocials"></div>
-    <a class="btn-solid" href="#products">Explore Products
+    <a class="btn-dark" href="#products">Shop now
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15"/><path d="M13 6l6 6-6 6"/></svg>
     </a>
   </div>
 </div>
 
 <main>
-  <!-- ============ SCENE 1 ============ -->
-  <section class="scene-wrap" id="home" aria-label="Intro">
-    <div class="scene scene-1">
-      <div class="media" data-media style="--obj-pos:50% 42%">
-        <canvas aria-hidden="true"></canvas>
+  <!-- ============ HERO — one calm image ============ -->
+  <section class="hero" id="home" aria-label="Intro">
+    <div class="hero-media">
+      <img src="hero.jpg" data-chain="hero" data-try="0"
+           alt="A couple sharing a calm, healthy morning at home"
+           style="--obj:50% 42%;--obj-m:52% 38%">
+    </div>
+    <div class="hero-inner">
+      <p class="hero-eyebrow eyebrow" data-reveal>VAYRON · Curated wellness</p>
+      <h1 class="hero-title" data-blur-text>The art of living well.</h1>
+      <p class="hero-sub" data-reveal style="--d:200ms">Carefully selected products for strength, heart, mind, and independence — for the decades you still intend to enjoy.</p>
+      <div class="hero-cta" data-reveal style="--d:340ms">
+        <a class="btn-dark" href="#products">Shop the collection
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15"/><path d="M13 6l6 6-6 6"/></svg>
+        </a>
+        <a class="btn-line" href="#about">Our philosophy</a>
       </div>
-      <div class="hero-inner">
-        <p class="hero-eyebrow eyebrow" data-reveal>VAYRON · Physician-led wellness</p>
-        <h1 class="hero-title" data-blur-text>The art of living well.</h1>
-        <p class="hero-sub" data-reveal style="--d:220ms">Doctor-curated products for strength, heart, mind, and independence — chosen for the decades you still intend to enjoy.</p>
-        <div class="hero-cta" data-reveal style="--d:380ms">
-          <a class="btn-solid" href="#products">Explore Products
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15"/><path d="M13 6l6 6-6 6"/></svg>
-          </a>
-          <a class="btn-ghost" href="#philosophy">Our Philosophy
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v15"/><path d="M6 13l6 6 6-6"/></svg>
-          </a>
+      <div class="hero-trust" data-reveal style="--d:480ms">
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 5-3.4 8.1-7 10-3.6-1.9-7-5-7-10V6z"/></svg>Curated</span>
+        <i aria-hidden="true"></i>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6M10 3v6l-5.5 8.5A2 2 0 0 0 6.2 21h11.6a2 2 0 0 0 1.7-3.5L14 9V3"/><path d="M7.5 15h9"/></svg>Evidence-informed</span>
+        <i aria-hidden="true"></i>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.5s-7.4-4.6-9.3-9A5.2 5.2 0 0 1 12 6.6a5.2 5.2 0 0 1 9.3 4.9c-1.9 4.4-9.3 9-9.3 9z"/><path d="M5 12h4l2-3 2 6 2-3h4"/></svg>Made for 50+</span>
+      </div>
+    </div>
+    <div class="scroll-cue" aria-hidden="true"><span class="line"></span>Scroll</div>
+  </section>
+
+  <section class="section" id="about">
+    <div class="wrap">
+      <div class="about-grid">
+        <div>
+          <p class="eyebrow" data-reveal>About VAYRON</p>
+          <h2 class="sec-title" data-blur-text>Healthy aging, independent living.</h2>
+          <p class="about-lede" data-reveal style="--d:180ms">The products that genuinely help after fifty are scattered, over-marketed, and rarely explained honestly — so we built the quieter alternative.</p>
         </div>
-        <div class="hero-trust" data-reveal style="--d:540ms">
-          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 5-3.4 8.1-7 10-3.6-1.9-7-5-7-10V6z"/></svg>Doctor-curated</span>
-          <i aria-hidden="true"></i>
-          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6M10 3v6l-5.5 8.5A2 2 0 0 0 6.2 21h11.6a2 2 0 0 0 1.7-3.5L14 9V3"/><path d="M7.5 15h9"/></svg>Evidence-informed</span>
-          <i aria-hidden="true"></i>
-          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.5s-7.4-4.6-9.3-9A5.2 5.2 0 0 1 12 6.6a5.2 5.2 0 0 1 9.3 4.9c-1.9 4.4-9.3 9-9.3 9z"/><path d="M5 12h4l2-3 2 6 2-3h4"/></svg>Made for 50+</span>
+        <div class="about-copy" data-reveal style="--d:260ms">
+          <p>Every item in our collection is researched, compared, and — where sensible — used by our own team before it earns a place here. We favor products that solve a real problem, are simple to use, and respect both your intelligence and your budget.</p>
+          <p>We're readers first and a shop second. Where the science is settled, we say so. Where it's thin, we say that too — and we always encourage you to involve your physician or pharmacist.</p>
+          <ul class="principles">
+            <li><em>i</em><b>Curated, not stocked.</b><span>Fewer things, chosen carefully.</span></li>
+            <li><em>ii</em><b>Evidence before hype.</b><span>We read the studies so you don't have to.</span></li>
+            <li><em>iii</em><b>Education first.</b><span>Every product comes with context, never pressure.</span></li>
+          </ul>
+          <p class="signature">— The VAYRON team</p>
         </div>
       </div>
-      <div class="scroll-cue" aria-hidden="true"><span class="line"></span>Scroll</div>
+      <div class="stats" data-stagger>
+        <div class="stat"><span class="stat-n">6</span><span class="stat-l">Pillars of health</span></div>
+        <div class="stat"><span class="stat-n" id="statProducts">25</span><span class="stat-l">Products, hand-picked</span></div>
+        <div class="stat"><span class="stat-n">50+</span><span class="stat-l">The age we design for</span></div>
+      </div>
     </div>
   </section>
 
-  <!-- ============ SCENE 2 ============ -->
-  <section class="scene-wrap" id="philosophy" aria-label="Our philosophy">
-    <div class="scene scene-2">
-      <div class="media" data-media style="--obj-pos:50% 55%">
-        <canvas aria-hidden="true"></canvas>
-      </div>
-      <div class="scene2-content">
-        <div class="s2-panel" data-reveal>
-          <p class="eyebrow" data-reveal style="--d:100ms">Our philosophy</p>
-          <h2 class="s2-title" data-blur-text>The craft of healthy aging.</h2>
-          <p class="s2-copy" data-reveal style="--d:260ms">We treat growing older as a discipline worth mastering. Six pillars — movement, mind, heart, nutrition, independence, and well-chosen supplements — each holding a small, deliberate collection. Nothing appears here that our editors wouldn't keep in their own homes.</p>
-          <div class="pillar-chips" id="pillarChips" data-reveal style="--d:420ms"></div>
-          <a class="btn-ivory" href="#pillars" data-reveal style="--d:540ms">Explore the Collection
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15"/><path d="M13 6l6 6-6 6"/></svg>
-          </a>
-        </div>
+  <section class="section" id="pillars" style="padding-top:0">
+    <div class="wrap">
+      <header class="sec-head">
+        <p class="eyebrow" data-reveal>The six pillars</p>
+        <h2 class="sec-title" data-blur-text>Find your focus.</h2>
+        <p class="sec-sub" data-reveal style="--d:160ms">Each pillar is a small, deliberate collection — start where it matters most to you.</p>
+      </header>
+      <div id="categoryRows"></div>
+    </div>
+  </section>
+
+  <section class="section" id="products" style="padding-top:0">
+    <div class="wrap">
+      <header class="sec-head" style="margin-bottom:0">
+        <p class="eyebrow" data-reveal>The collection</p>
+        <h2 class="sec-title" data-blur-text>Everything, curated.</h2>
+      </header>
+      <div class="pills" id="pills" role="tablist" aria-label="Filter products by pillar"></div>
+      <p class="grid-count" id="gridCount" role="status"></p>
+      <div class="grid" id="productGrid"></div>
+    </div>
+  </section>
+
+  <section class="section" id="story" style="padding-top:0">
+    <div class="wrap">
+      <header class="sec-head" style="margin-left:auto;margin-right:auto;text-align:center;max-width:600px">
+        <p class="eyebrow" data-reveal>The VAYRON way</p>
+        <h2 class="sec-title" data-blur-text>Wellness, lived at home.</h2>
+      </header>
+      <figure class="story-img" data-reveal>
+        <img src="story1.jpg" data-chain="story1" data-try="0"
+             alt="An older couple browsing together on the sofa" loading="lazy" decoding="async">
+        <figcaption class="story-cap">Together, every morning</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="section" id="social" style="padding-top:0">
+    <div class="wrap">
+      <header class="sec-head">
+        <p class="eyebrow" data-reveal>Follow along</p>
+        <h2 class="sec-title" data-blur-text>Wellness, in real time.</h2>
+        <p class="sec-sub" data-reveal style="--d:140ms">Guides, product notes, and honest mornings — on our YouTube channel.</p>
+      </header>
+      <div class="social-grid" id="socialGrid" data-stagger></div>
+    </div>
+  </section>
+
+  <section class="section" id="contact" style="padding-top:0">
+    <div class="wrap">
+      <div class="contact-panel" data-reveal>
+        <p class="eyebrow">Contact</p>
+        <h2 class="sec-title">Questions about a product?</h2>
+        <p>Tell us what you're trying to solve — a gift, a steadier grip, a number you want to keep an eye on. The fastest way to reach us is the comments on our YouTube videos.</p>
+        <a class="contact-mail" href="https://www.youtube.com/@GoldenVitalityHealth" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"><rect x="3" y="6" width="18" height="12" rx="4"/><path d="M10.5 9.5l4.5 2.5-4.5 2.5z" fill="currentColor" stroke="none"/></svg>
+          Watch us on YouTube
+        </a>
+        <p class="contact-note">New guides on healthy aging, nutrition, and everyday strength — every week.</p>
       </div>
     </div>
   </section>
 
-  <div class="page">
-    <div class="atmos" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
-
-    <section class="section" id="about">
-      <div class="wrap">
-        <div class="about-grid">
-          <div>
-            <p class="eyebrow" data-reveal>About VAYRON</p>
-            <h2 class="sec-title" data-blur-text>Healthy aging, independent living.</h2>
-            <p class="about-lede" data-reveal style="--d:200ms">The products that genuinely help after fifty are scattered, over-marketed, and rarely explained honestly — so we built the quieter alternative.</p>
-          </div>
-          <div class="about-copy" data-reveal style="--d:280ms">
-            <p>Every item in our collection is researched, compared, and — where sensible — used by our own team before it earns a place here. We favor products that solve a real problem, are simple to use, and respect both your intelligence and your budget.</p>
-            <p>We're readers first and a shop second. Where the science is settled, we say so. Where it's thin, we say that too — and we always encourage you to involve your physician or pharmacist.</p>
-            <ul class="principles">
-              <li><em>i</em><b>Curated, not stocked.</b><span>Fewer things, chosen carefully.</span></li>
-              <li><em>ii</em><b>Evidence before hype.</b><span>We read the studies so you don't have to.</span></li>
-              <li><em>iii</em><b>Education first.</b><span>Every product comes with context, never pressure.</span></li>
-            </ul>
-            <p class="signature">— Dr. VAYRON</p>
-          </div>
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <span class="brand">
+            <svg class="mono" viewBox="0 0 40 40" aria-hidden="true">
+              <circle cx="20" cy="20" r="18.5" fill="none" stroke="currentColor" stroke-width="1.4"/>
+              <path d="M12.5 26 20 12l7.5 14" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>VAYRON</span>
+          </span>
+          <p class="footer-mission">Curated wellness for the second half of life.</p>
+          <div class="footer-socials" id="footerSocials"></div>
         </div>
-        <div class="stats" data-stagger>
-          <div class="stat"><span class="stat-n">6</span><span class="stat-l">Pillars of health</span></div>
-          <div class="stat"><span class="stat-n" id="statProducts">25</span><span class="stat-l">Products, hand-picked</span></div>
-          <div class="stat"><span class="stat-n">50+</span><span class="stat-l">The age we design for</span></div>
+        <div>
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
         </div>
-      </div>
-    </section>
-
-    <section class="section" id="pillars">
-      <div class="wrap">
-        <header class="sec-head">
-          <p class="eyebrow" data-reveal>The six pillars</p>
-          <h2 class="sec-title" data-blur-text>Find your focus.</h2>
-          <p class="sec-sub" data-reveal style="--d:180ms">Each pillar is a small, deliberate collection — start where it matters most to you.</p>
-        </header>
-        <div id="categoryRows"></div>
-      </div>
-    </section>
-
-    <section class="section" id="featured">
-      <div class="wrap">
-        <header class="sec-head">
-          <p class="eyebrow" data-reveal>Editor's selection</p>
-          <h2 class="sec-title" data-blur-text>Editor's picks, this season.</h2>
-        </header>
-        <div class="featured-grid" id="featuredGrid"></div>
-      </div>
-    </section>
-
-    <section class="section" id="products">
-      <div class="wrap">
-        <header class="sec-head" style="margin-bottom:0">
-          <p class="eyebrow" data-reveal>The collection</p>
-          <h2 class="sec-title" data-blur-text>Everything, curated.</h2>
-        </header>
-        <div class="pills" id="pills" role="tablist" aria-label="Filter products by pillar"></div>
-        <p class="grid-count" id="gridCount" role="status"></p>
-        <div class="grid" id="productGrid"></div>
-      </div>
-    </section>
-
-    <section class="section" id="social">
-      <div class="wrap">
-        <header class="sec-head">
-          <p class="eyebrow" data-reveal>Follow along</p>
-          <h2 class="sec-title" data-blur-text>Wellness, in real time.</h2>
-          <p class="sec-sub" data-reveal style="--d:160ms">Guides, product notes, and honest mornings — on the two channels we actually keep.</p>
-        </header>
-        <div class="social-grid" id="socialGrid" data-stagger></div>
-      </div>
-    </section>
-
-    <section class="section" id="contact">
-      <div class="wrap">
-        <div class="contact-panel" data-reveal>
-          <p class="eyebrow">Contact</p>
-          <h2 class="sec-title">Questions about a product?</h2>
-          <p>Tell us what you're trying to solve — a gift, a steadier grip, a number you want to keep an eye on. The fastest way to reach us is a direct message on Instagram.</p>
-          <a class="contact-mail" href="https://www.instagram.com/draverycarter/" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg>
-            Message us on Instagram
-          </a>
-          <p class="contact-note">You can also find us — and leave your questions in the comments — on <a href="https://www.youtube.com/channel/UCqq7fnNB4zcT0wnUzZEbZyA" target="_blank" rel="noopener">YouTube</a>.</p>
+        <div>
+          <h4>The six pillars</h4>
+          <ul id="footerCats"></ul>
+        </div>
+        <div>
+          <h4>Reach us</h4>
+          <ul>
+            <li><a href="https://www.youtube.com/@GoldenVitalityHealth" target="_blank" rel="noopener">YouTube · Golden Vitality</a></li>
+          </ul>
         </div>
       </div>
-    </section>
-    <section class="section" id="story">
-      <div class="wrap">
-        <header class="sec-head" style="margin-left:auto;margin-right:auto;text-align:center;max-width:640px">
-          <p class="eyebrow" data-reveal>The VAYRON way</p>
-          <h2 class="sec-title" data-blur-text>Wellness, lived at home.</h2>
-          <p class="sec-sub" data-reveal style="--d:160ms">Our whole philosophy in two frames — comfort, calm, and independence that lasts.</p>
-        </header>
-        <div class="story-pair">
-          <figure class="story-img" data-reveal>
-            <img src="hero-poster.png.png" alt="A relaxed morning at home" loading="lazy" decoding="async">
-            <figcaption class="story-cap">Scene one · Morning light</figcaption>
-          </figure>
-          <figure class="story-img" data-reveal style="--d:160ms">
-            <img src="scene2-poster.png.png" alt="Quiet, comfortable living" loading="lazy" decoding="async">
-            <figcaption class="story-cap">Scene two · The quiet hours</figcaption>
-          </figure>
-        </div>
+      <div class="footer-bottom">
+        <p class="footer-disc">VAYRON is a wellness education platform. Some product links are affiliate links, which may earn us a commission at no extra cost to you — we only feature products our editors would recommend to family. Content on this site is informational and is not medical advice. Always consult your physician or pharmacist before starting a supplement, especially if you take medication or manage a health condition.</p>
+        <p class="footer-copy">© <span id="year">2025</span> VAYRON</p>
       </div>
-    </section>
-
-    <footer class="footer">
-      <div class="wrap">
-        <div class="footer-grid">
-          <div>
-            <span class="brand">
-              <svg class="mono" viewBox="0 0 40 40" aria-hidden="true">
-                <circle cx="20" cy="20" r="18.5" fill="none" stroke="currentColor" stroke-width="1.5"/>
-                <path d="M12.5 26 20 12l7.5 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M15.8 21.5h8.4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-              </svg>
-              <span>VAYRON</span>
-            </span>
-            <p class="footer-mission">Physician-led wellness, curated for the second half of life.</p>
-            <div class="footer-socials" id="footerSocials"></div>
-          </div>
-          <div>
-            <h4>Explore</h4>
-            <ul>
-              <li><a href="#home">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#featured">Featured</a></li>
-              <li><a href="#products">Products</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-          </div>
-          <div>
-            <h4>The six pillars</h4>
-            <ul id="footerCats"></ul>
-          </div>
-          <div>
-            <h4>Reach us</h4>
-            <ul>
-              <li><a href="https://www.instagram.com/draverycarter/" target="_blank" rel="noopener">Instagram · @draverycarter</a></li>
-              <li><a href="https://www.youtube.com/channel/UCqq7fnNB4zcT0wnUzZEbZyA" target="_blank" rel="noopener">YouTube · Dr. VAYRON</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="footer-bottom">
-          <p class="footer-disc">VAYRON is a wellness education platform. Some product links are affiliate links, which may earn us a commission at no extra cost to you — we only feature products our editors would recommend to family. Content on this site is informational and is not medical advice. Always consult your physician or pharmacist before starting a supplement, especially if you take medication or manage a health condition.</p>
-          <p class="footer-copy">© <span id="year">2025</span> VAYRON · Wellness, curated.</p>
-        </div>
-      </div>
-    </footer>
-  </div>
+    </div>
+  </footer>
 </main>
 
-<noscript><p style="padding:20px;text-align:center">This experience needs JavaScript for its cinematic scenes and product filtering.</p></noscript>
+<noscript><p style="padding:20px;text-align:center">This experience needs JavaScript for product filtering.</p></noscript>
 
 <script>
 (function(){
@@ -747,30 +584,19 @@ body.menu-open .mm-nav a{opacity:1;transform:none}
 
 /* =====================================================================
    ✎ EDIT YOUR CONTENT HERE
-   - Scenes: the poster frames load now; add hero.mp4 / scene2.mp4 later.
-   - The poster URLs are signed links that expire: download both images,
-     compress at squoosh.app, upload next to this file as hero-poster.jpg
-     and scene2-poster.jpg, then swap the two poster values below.
+   Products, categories, socials. Product image chain:
+   PHOTO_MAP -> p.image -> images/<id>.jpg -> elegant placeholder.
+   Scene images try: hero/story1 with .jpg/.jpeg/.png automatically,
+   then fall back to the old posters — the site never shows a broken
+   image while you upload new files.
    ===================================================================== */
 
-const VIDEO_CONFIG = {
-  hero: {
-    src: "hero.mp4.mp4",
-    mobileSrc: "",
-    poster: "",
-    objectPosition: "70% 45%",
-  },
-  scene2: {
-    src: "scene2.mp4",
-    mobileSrc: "",
-    poster: "",
-    objectPosition: "70% 45%",
-  },
-  crossfade: { fadeMs: 500, fadeOutLead: 0.55 }
-};
+const SOCIAL_LINKS = [
+  { name:"Golden Vitality", handle:"@GoldenVitalityHealth", icon:"youtube", logo:"gv-logo.png",
+    url:"https://www.youtube.com/@GoldenVitalityHealth", cta:"Subscribe",
+    blurb:"Long-form guides on healthy aging, nutrition, and everyday strength." }
+];
 
-/* Real product photos (konquest has none yet — studio render until
-   you add one line:  konquest: "URL", ) */
 var PHOTO_MAP = {
   bands:"https://m.media-amazon.com/images/I/71S4-NjoTDL._AC_SL1500_.jpg",
   dumbbells:"https://m.media-amazon.com/images/I/61Lm0EbN7QL._AC_SX300_SY300_QL70_FMwebp_.jpg",
@@ -808,98 +634,81 @@ const CATEGORIES = [
 ];
 
 const PRODUCTS = [
-  { id:"bands", num:"01", name:"Resistance Loop Bands", art:["bands"], price:"$9.98", cat:"strength", badge:"best",
+  { id:"bands", num:"01", name:"Resistance Loop Bands", price:"$9.98", cat:"strength", badge:"best",
     desc:"Fit Simplify loop exercise bands with instruction guide and carry bag — set of five progressive tensions.",
     link:"https://www.amazon.com/dp/B01AVDVHTI?lv=shuf&channelId=480&plpRedirect=mhFallback&th=1&linkCode=ll2&tag=a0973971-20&linkId=79d2486999bf02d752c2bbee8d1d70ae&language=en_US&gaOptInStatus=true&ref_=as_li_ss_tl" },
-  { id:"dumbbells", num:"02", name:"Neoprene Dumbbells", art:["dumbbell"], price:"$34.14", cat:"strength", badge:"popular",
+  { id:"dumbbells", num:"02", name:"Neoprene Dumbbells", price:"$34.14", cat:"strength", badge:"popular",
     desc:"Amazon Basics neoprene hand weights for exercise and muscle toning.",
     link:"https://www.amazon.com/dp/B0727Q5F94?pd_rd_w=cJMJK&content-id=amzn1.sym.ef7015ff-63c0-4f0b-a4f5-1f704dea6667%3Aamzn1.sym.ef7015ff-63c0-4f0b-a4f5-1f704dea6667&pf_rd_p=ef7015ff-63c0-4f0b-a4f5-1f704dea6667&pf_rd_r=6KM3J6TXST1NX7PBSDAF&pd_rd_wg=3EEBb&pd_rd_r=87dc5e42-620a-4ced-9182-b7bf87d2355b&pd_rd_i=B0727Q5F94&sr=1-2-1c7c554e-c3b9-43b0-8060-ddc1e436c844&qid=1788688436&th=1&linkCode=ll2&tag=a0973971-20&linkId=3b8c5444d234357283a2e1cfc4d79fc7&language=en_US&gaOptInStatus=true&ref_=as_li_ss_tl" },
-  { id:"strap", num:"03", name:"The Original Stretch Strap", art:["strap"], price:"$15.95", cat:"strength", badge:"popular",
+  { id:"strap", num:"03", name:"The Original Stretch Strap", price:"$15.95", cat:"strength", badge:"popular",
     desc:"OPTP Stretch Out Strap with exercise book, made in the USA.",
     link:"https://www.amazon.com/Original-Stretch-Strap-Exercise-OPTP/dp/B00065X222?dib=eyJ2IjoiMSJ9.p-Q11SVc6eTZddptGq5IfCu4JEJr2ETdCX4TXPLuIwvdxd87wiuaYlZdmeccbTyRq5442_pGkhaz9sYI0KQSeqmM3mzRVjvhA2VwtbXV0EM5KWNFFSH6QHQlNjzZjFyWd4GyY5h8JEDNZPnleFGKTXde_BsT04waxdVFzrI1CzDdj_ac1OMBc_irOXi8N3Fs8CwhIY-M-v6vDkLuYvSgj__wPdWCEJb9zG7tbTqOLhgeFHpzVnwIU9mCBKggmBuocBeddrrCoLibK_Fi2DLcorIE0NKkvw0qnY9NNQxi8.-Q9pmKFOVTZVFMUO1zMEbSegbXYuhnMopwDmf06kY1w&dib_tag=se&keywords=OPTP+Stretch+Out+Strap&qid=1788688871&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1&linkCode=ll2&tag=a0973971-20&linkId=0f0a91a9312cadd6e8e5575478ed4d61&language=en_US&gaOptInStatus=true&ref_=as_li_ss_tl" },
-  { id:"socks", num:"04", name:"Non-Slip Grip Socks", art:["socks"], price:"$14.44", cat:"strength", badge:"best",
+  { id:"socks", num:"04", name:"Non-Slip Grip Socks", price:"$14.44", cat:"strength", badge:"best",
     desc:"Unenow unisex cushioned grip socks for yoga, pilates, home, and hospital use.",
     link:"https://www.amazon.com/unenow-Unisex-Cushion-Pilates-Hospital/dp/B07YFBX799?crid=2G1RAW39D97BS&dib=eyJ2IjoiMSJ9.9jzJBBjIX8Ps359Z_HHbuBhtxpZ5_CgKIZrTkDK6jczvwXEGKNs--7rAI5PslLRIMD_uJPUocUce3Oiux7L5t4uEPM9BFKEr0E52ZvZn5Z0b2zuQ4rVqf0zU7y6F99qYte8kUyVCbT0eiimMs3W9Ayao8g8HzpGqeCMkbiBETlXFEJpxV54G5Cnvof6ZqyX2qJFR9R64XfzSfD4L9b9jgzwprLq-n8MSEaxt2wIEgrVJiCh3rCV5kEEBNF7Tpig3dw_tOh9vd1dHUT3wqNAcCbrZzbTGYy8HdJdKRSpjpY.coMkLNcYvn7bO4RjVIp5kp_VpznHIFV4jPgIUzZ1r0I&dib_tag=se&keywords=Non-slip%2Bsocks%2Bfor%2Bthe%2Belderly&qid=1788689480&sprefix=non-slip%2Bsocks%2Bfor%2Bthe%2Belderly%2Caps%2C279&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=a0973971-20&linkId=99238aad48fc3554017a12f9a80338c1&language=en_US&gaOptInStatus=true&ref_=as_li_ss_tl" },
-
-  { id:"ihealth", num:"05", name:"iHealth Track BP Monitor", art:["bp",{v:"a"}], price:"$27.98", cat:"heart", badge:"demand",
-    desc:"Smart upper-arm blood pressure monitor with wide-range cuff and Bluetooth, for standard to large adult arms.",
+  { id:"ihealth", num:"05", name:"iHealth Track BP Monitor", price:"$27.98", cat:"heart", badge:"demand",
+    desc:"Smart upper-arm blood pressure monitor with wide-range cuff and Bluetooth.",
     link:"https://www.amazon.com/dp/B01C5QS1T8?lv=shuf&utm_source=chatgpt.com&channelId=480&plpRedirect=mhFallback&th=1&linkCode=ll2&tag=a0973971-20&linkId=24f0d6c622944ab756bdffdb52b31a57&language=en_US&gaOptInStatus=true&ref_=as_li_ss_tl" },
-  { id:"konquest", num:"06", name:"Konquest Upper-Arm BP Monitor", art:["bp",{v:"k"}], price:"$36.95", cat:"heart", badge:"popular",
-    desc:"Automatic digital BP monitor with large backlit display and irregular-heartbeat detector, for home use.",
+  { id:"konquest", num:"06", name:"Konquest Upper-Arm BP Monitor", price:"$36.95", cat:"heart", badge:"popular",
+    desc:"Automatic digital BP monitor with large backlit display and irregular-heartbeat detector.",
     link:"https://www.amazon.com/s?k=Konquest+KBP-2704A+blood+pressure+monitor&tag=a0973971-20" },
-  { id:"scale", num:"07", name:"Etekcity Kitchen Scale", art:["scale"], price:"$29.99", cat:"heart", badge:"best",
-    desc:"Digital food scale in 304 stainless steel — tare function, grams and ounces, ideal for heart-healthy meal prep.",
+  { id:"scale", num:"07", name:"Etekcity Kitchen Scale", price:"$29.99", cat:"heart", badge:"best",
+    desc:"Digital food scale in 304 stainless steel — tare function, grams and ounces.",
     link:"https://www.amazon.com/Etekcity-Waterproof-Rechargeable-Graduation-Stainless/dp/B09HM2TN5Z?dib=eyJ2IjoiMSJ9.xVlCl_9y7W_p13Y0PXn_mN8VMkqyMLB-zbxtHQgor0jR9DMBE_yeD8fFjTwGKMuyZKD_AW-xO37meBKvReuqQS7PAwQEPzUfEY60BuuwrbpYF2GmOTh12zOa15Azy6iBPjIt9iYXAi90E22YmKDSEGxIgxvhe-eTkgGf_wDFm1rPG6EupfAWCl5kfrGh8dyv32UWXs63NAps38CnQYu_vfcaNBWRQsrpQ_53Z8slIjAh_j8igkf5c7k-ndzHu6JLrhwbsOmMkMVpdHwV66gtaWdPywArOdaCMWmhWWtRZms.QRIlxj4J-naDb9UNuvdDX_rit_yh5FbmXv3ne5Z5OQw&dib_tag=se&keywords=Etekcity%2Bfood%2Bkitchen%2Bscale&qid=1788694185&refresh=1&sr=8-2&th=1&linkCode=ll2&tag=a0973971-20&linkId=5cecc0ccddbd8f6e505b7aead79c057d&language=en_US&gaOptInStatus=true&ref_=as_li_ss_tl" },
-
-  { id:"whey", num:"08", name:"Gold Standard Whey", art:["tub"], price:"$48.83", cat:"nutrition", badge:"best",
-    desc:"Optimum Nutrition whey protein, double rich chocolate — 24 g of 100% whey per serving, 2 lb.",
+  { id:"whey", num:"08", name:"Gold Standard Whey", price:"$48.83", cat:"nutrition", badge:"best",
+    desc:"Optimum Nutrition whey protein, double rich chocolate — 24 g per serving, 2 lb.",
     link:"https://www.amazon.com/dp/B002DYIZH6?lv=shuf&utm_source=chatgpt.com&channelId=480&plpRedirect=mhFallback&th=1&linkCode=ll2&tag=a0973971-20&linkId=239225e6bef846ca261c5aff862601b0&language=en_US&gaOptInStatus=true&ref_=as_li_ss_tl" },
-  { id:"shakes", num:"09", name:"Premier Protein Shakes", art:["shake"], price:"$23.97", cat:"nutrition", badge:"popular",
+  { id:"shakes", num:"09", name:"Premier Protein Shakes", price:"$23.97", cat:"nutrition", badge:"popular",
     desc:"Premier Protein 30 g high-protein shakes, chocolate, 12-pack.",
     link:"https://www.amazon.com/Premier-Protein-High-Shake-Chocolate/dp/B008JGIZGS?dib=eyJ2IjoiMSJ9.DWty3AGdo0MYWZxEc-NEiZLwtxNuhspgYy-vxVA3gkKJsRd1LQ2CLupDttVrZ03ccHUPGvrRNbv8GSNlNJfdMUQxHIItGqnQa1Ko8ly0mvSjV4TD9LIjxBjCZFiUUwTqMpXi6Ndj4WD4p6uPMSsfQqRtqZHkc6C1G_IlVY8z3gHTm3u7b3U7sxOQkoovG7V3Jsia1_ftbmR7_WbxXPLKC7_BMTdAP3e-LDMirI8CEqnK_qlGhggIgnNLTfjGxLDuTXmvJyt5Q1e5pibcQ7JFA-DRM6K1NjN2ZGFBX-OyyTdhtu8.lILADKfc70QzgdRWoru-jJKAFcVbWzbCcmrqiw-VTkY&dib_tag=se&keywords=Premier%2BProtein%2BShakes&qid=1788694797&sr=8-2&th=1&linkCode=ll2&tag=a0973971-20&linkId=0be9296a32c740f45767c288bf3d9cb2&language=en_US&gaOptInStatus=true&ref_=as_li_ss_tl" },
-  { id:"blender", num:"10", name:"Ninja Personal Blender", art:["blender"], price:"$69.99", cat:"nutrition", badge:"best",
+  { id:"blender", num:"10", name:"Ninja Personal Blender", price:"$69.99", cat:"nutrition", badge:"best",
     desc:"Ninja Fit compact 700 W personal blender with two 16-oz cups.",
     link:"https://www.amazon.com/Ninja-Personal-Smoothies-Blending-700-Watt/dp/B01FHOWYA2?ie=UTF8&s=psc&keywords=Ninja%2BPersonal%2BBlender&dib_tag=se&ASIN=B01FHOWYA2&dib=eyJ2IjoiMSJ9.m4E06wfigXkfpqG4EVpMwTDeNnnnU4M2snSCDl6oZ3n2qZLYsEU73Mhh9EC9gpgPLggkwnLyzM3kXVoIEMAoLz82TrkXyn_sR2QqGEk-yvmZ_D-RcAqIp2R0Md87kaiCPnqQSmIovsITlR2KfFhMAjXf_4znGojX4_k2S2ghGqcNY0Owc_eYIMr_iTETXw2dWOtoMetjJG_PKsbSHm0tEAWohmp0KDLFqGQt_cfOU.vWd9mRlNf5lYTOkldRNAWc-c2d9FfQAxGKsaDOIC7nY&qid=1788695106&sr=8-2&th=1&linkCode=ll2&tag=a0973971-20&linkId=1e1b783d00b951ce91416ebfe937e5ea&language=en_US&gaOptInStatus=true&ref_=as_li_ss_tl" },
-  { id:"stanley", num:"11", name:"Stanley IceFlow Tumbler", art:["tumbler",{v:"stanley"}], price:"$21.00", cat:"nutrition", badge:"deal",
+  { id:"stanley", num:"11", name:"Stanley IceFlow Tumbler", price:"$21.00", cat:"nutrition", badge:"deal",
     desc:"STANLEY IceFlow 2.0 flip-straw insulated tumbler, 30 oz.",
     link:"https://www.amazon.com/STANLEY-IceFlow-Straw-Tumbler-Black/dp/B0DR9PMK1W?dib=eyJ2IjoiMSJ9.3dJCDlpPFOUiAdU5rWNlvX6OcLyzJYxS_h7CRD04AnxJLgTheUgmafy_RZ5DStfBGRsakHHf-zCOQdM2KN1FBJhft7k41l1jSFdQ6K-ULtuqutKwNOrDHTr8PtACf-nGxLtpZTzLOwU4YXpgBB-DWSReNYDOdAT2KjEL90UEOZsUfJFL-WTyCcOzIEbD495mS2QjDJdZ546ZHLFy7hJme9wbX7LVy9dgbjD21TSe8oFq4gN9p1Ceuevhmuy7bTWfXE7e025fQ-HBs6RL4onq774euGHlWDh6370yzxz-kw.FF3Swz2uSgCfyELAmd13K-CSu-Fvl5S94dVvG0kCt-M&dib_tag=se&keywords=Stanley%2BIceFlow&qid=1788695525&sr=8-2&th=1&linkCode=ll2&tag=a0973971-20&linkId=db7a916811615aaa7b18389b1be76fb1&language=en_US&gaOptInStatus=true&ref_=as_li_ss_tl" },
-  { id:"hydro", num:"12", name:"Hydro Flask Bottle", art:["tumbler",{v:"hydro"}], price:"$33.74", cat:"nutrition", badge:"deal",
+  { id:"hydro", num:"12", name:"Hydro Flask Bottle", price:"$33.74", cat:"nutrition", badge:"deal",
     desc:"Hydro Flask insulated stainless steel wide-mouth bottle with flex lid, 32 oz.",
     link:"https://www.amazon.com/Hydro-Flask-Wide-Flex-Trillium/dp/B0G6GRPSSL?dib=eyJ2IjoiMSJ9.IxA2RXsrETSEzhOcaHknvxhbVHCcE09wHP2iCBbUsvy5Ftes4iRCBtHgCAEFlmM-C92FyxiLC0WEHmkJray_vvkmaGhSa9Do7WLozkc8FI5vg094iDI_Ss9AZ4T2vYgEsF8zLXfbFsrOLMo2Ulgr4rKBA60JXxw-xKdHJOMThddWIT5vjXW9fDFHS5NeUTbqICZCLcBaIvA0-zKBbLhE9UphbbGIg4X6E_fshve5LfDCFpCD8f76pdilhl0miba_BBrvRjNHYN8dhWCWvUvUTOHFmUnoBPQPN9DLcAqzgkWC6E.BmP3l25OEU4p_4t2y6vm-38HVKjMXgQSLa-uSkKYNBM&dib_tag=se&keywords=Hydro%2BFlask%2Bwater%2Bbottle&qid=1788695381&sr=8-6&th=1&linkCode=ll2&tag=a0973971-20&linkId=9540d65efd59f811e2227c834fa7d418&language=en_US&gaOptInStatus=true&ref_=as_li_ss_tl" },
-  { id:"owala", num:"13", name:"Owala FreeSip Bottle", art:["tumbler",{v:"owala"}], price:"$29.99", cat:"nutrition", badge:"best",
+  { id:"owala", num:"13", name:"Owala FreeSip Bottle", price:"$29.99", cat:"nutrition", badge:"best",
     desc:"Owala FreeSip stainless steel water bottle with sip-spout lid, 24 oz.",
     link:"https://www.amazon.com/Owala-FreeSip-Insulated-Stainless-BPA-Free/dp/B0BZYCJK89?dib=eyJ2IjoiMSJ9.R6-PrsCUqpjSsQbErtw_Bh22I3N31TTfi1iyjKnevwqyg_-kzCGZAhknn0tJ0BIuyCqAopELpHAAnU5msgSTfI6HHFZb1jtstXcSEnhj0eR4HXQeH0nY2NkC3qsWycwJKyLw8YZuaI4ncZjikI8ynddzUdGFqmkIJSGRdA3_MG_1lBLT3A0zG31qsrhgKIxgOqFSbMocSOGU6hUzNa-09Ne-rkN5_K4wK0AeCnkQYzkpiI3MalZV-Z57FyNr9ga5TslulF6Nf3IMJzA98ecaxr1Nmz4PgSbcF61x7EE.15fv49CYiCZem184KfLi7oYoVOJHkwmFwubLAqudzSE&dib_tag=se&keywords=Owala%2BFreeSip&qid=1788695964&sr=8-2&th=1&linkCode=ll2&tag=a0973971-20&linkId=3e39dc666aebb8175c9b43732175211d&language=en_US&gaOptInStatus=true&ref_=as_li_ss_tl" },
-
-  { id:"grabber", num:"14", name:"Reacher Grabber Tool", art:["grabber"], price:"$8.49", cat:"aging", badge:"best",
+  { id:"grabber", num:"14", name:"Reacher Grabber Tool", price:"$8.49", cat:"aging", badge:"best",
     desc:"32-inch lightweight foldable grabber — a reaching assist for everyday independence.",
     link:"https://www.amazon.com/Reacher-Foldable-Lightweight-Reaching-Extension/dp/B078RMCFWQ?dib=eyJ2IjoiMSJ9.9ADqss6eYASNuMlGQpv-29YCewoCPC59blCZ2qbUzQK3B4TNgl8cvMobjndx5Fve4prvxCX1_sRXT9SPYNaTlbDbxSmNLvh-avzGyn_6lu0Dyw2SMkx1Sg5yVxxWEoNiH_JIClsj_tGYJhuMs7b55eWw2vSbRKSCz4nOnoX7jDWe5uR6wexvkvSTQ-3P2OO0GGl8-WIADfBHic_LM5poUeSbTN3EQSfyL21uKJWHbOR2MiQw1T817Uwwc_hubUUy-2sZxUaZM2XeIe5xbrbov6FPinwopMFIsiHuesF9M_nE.jLPBMHUBt1GU5aJ3uf6gx0YuziVyWcgH5p8o_fGLgVU&dib_tag=se&keywords=reacher%2Bgrabber%2Btool%2Bfor%2Bseniors&qid=1788696190&sr=8-2&th=1&linkCode=ll2&tag=a0973971-20&linkId=cc27cf6aa58e8c73f1fa5d977a50cd77&language=en_US&gaOptInStatus=true&ref_=as_li_ss_tl" },
-  { id:"sensorlights", num:"15", name:"Motion-Sensor Lights", art:["light"], price:"$21.99", cat:"aging", badge:"best",
-    desc:"MCGOR rechargeable dimmable motion-sensor lights with magnetic mount, 2-pack — for stairs and hallways.",
+  { id:"sensorlights", num:"15", name:"Motion-Sensor Lights", price:"$21.99", cat:"aging", badge:"best",
+    desc:"MCGOR rechargeable dimmable motion-sensor lights, 2-pack — for stairs and hallways.",
     link:"https://www.amazon.com/Rechargeable-Operated-Magnetic-Dimmable-Wireless/dp/B0BDF8CVBN?dib=eyJ2IjoiMSJ9.6QotT_Qwx5zGOI_M7D9AmhI1WYyUFvukeew3l8buFOq_4LTN9W3NnIg9ps74TXcQwdAw8UnNStLTWobPIU5HV-SaJWCoIDR3w4ql8jQlVtOp4ZPdt4J9B9QnVivK679H3OLCGz6D9cxy3QDpa67NGRcn7p76Y0WMqfep9tJsXPTOrtctXNbNuhLdIXRX1OxLSXyhSfthEJfOLa3zUQGrskDWJ-2L1l44z2C7MzaRnvUf3f3AeIcJc_F3ilyC46F1OQNOcMDUw2ZCyEcThCLK5zhh1QyWARb0GizOiAb0Es.Yco1F09RflURLWmiFswyWbkFaFR-SlGnTdGHAs-6y6o&dib_tag=se&keywords=MCGOR%2Bmotion%2Bsensor%2Bnight%2Blights&qid=1788696383&sr=8-1&th=1&linkCode=ll2&tag=a0973971-20&linkId=6522df4895ba5a60619651899a65218c&language=en_US&gaOptInStatus=true&ref_=as_li_ss_tl" },
-  { id:"bathmat", num:"16", name:"Gorilla Grip Bath Mat", art:["mat"], price:"$21.98", cat:"aging", badge:"best",
+  { id:"bathmat", num:"16", name:"Gorilla Grip Bath Mat", price:"$21.98", cat:"aging", badge:"best",
     desc:"GORILLA GRIP non-slip bathtub and shower mat, 35 × 16 in, clear.",
     link:"https://www.amazon.com/Gorilla-Grip-Shower-Bath-Mat/dp/B01F5K9YNS?dib=eyJ2IjoiMSJ9.tF6hixUYqjDtAGW-xZOpbh59c8zCZU5x5UZdVnxv3aE6nUNbz166vZuaQFGml8Y0PGyv9d_NFMVeG5eUUVtpODNn5guNtDGE55LCcfdeQBpX-eAaMM8gzI-bDaV_9fQWttX0OtSdQiIOboMBM15LJHd2ABuDTRTVVqmGJP-hKua5qSqtbdRgka7ubtVZa59wgcongmv_XYAWWVfSvmynmq5PVW2hdYRjcoMkcC_CZHNcuKsy7FsKtLbgzEHGActk01MfHg3PdPewrMAvgNwIVDJUoaKtk3mSXz5_wWH6F0.FMFScDULAKWfS8f60Nlf7Ka-MQ0vnWnvIsTgcQXRzkQ&dib_tag=se&keywords=GORILLA%2BGRIP%2Bbath%2Bmat&qid=1788696501&sr=8-1&th=1&linkCode=ll2&tag=a0973971-20&linkId=10f8f40ae686f8607a25c7a2550ba6b9&language=en_US&gaOptInStatus=true&ref_=as_li_ss_tl" },
-
-  { id:"centrum-men", num:"17", name:"Centrum Silver Men 50+", art:["jar"], price:"$14.96", cat:"supplements", badge:"demand",
-    desc:"Centrum Silver multivitamin gummies formulated for men over 50 — 140 count.",
+  { id:"centrum-men", num:"17", name:"Centrum Silver Men 50+", price:"$14.96", cat:"supplements", badge:"demand",
+    desc:"Centrum Silver multivitamin gummies for men over 50 — 140 count.",
     link:"https://www.amazon.com/Centrum-Silver-Multivitamin-Multimineral-Supplement/dp/B0BS1VDLZC?dib=eyJ2IjoiMSJ9.S5NpfuCu1-nNwDJv1k9Kz9eOkX6mXYoizLtKyIWrpJV6wTBlSfiJ_jS2YeSMumac0stBiWAITiFRnl7loPoIbKGBzO-tHsJr0HUU3a9GHS0t1EWLH2nIVSaGsyfgeg8hj85xfRwVLhG3TggJi4CDSuoGgzX3gd-yeeZl-9tj6SMM823VB1V2SmXiegGG1G-5x9HTZSruQPGtFxNW97wrmHZ1AszU5DsPzoG9yvtAnf-OXc9g7pVmqgJuoNIFPY_zK8uLDjTXW8qaNhKxaTN-ENtXWQWyOQpsZhNrq1sxD4.2MnE7fUEw1QiHKhRwOxr9r7r56jUG3i_DCPqC2ZEEiU&dib_tag=se&keywords=Centrum%2BSilver%2BMen%2B50%2B&qid=1788696877&sr=8-4&th=1&linkCode=ll2&tag=a0973971-20&linkId=eccb0bd3aae5aeba3e9987d665573414&language=en_US&gaOptInStatus=true&ref_=as_li_ss_tl" },
-  { id:"centrum-women", num:"18", name:"Centrum Silver Women 50+", art:["jar"], price:"$14.96", cat:"supplements", badge:"demand",
+  { id:"centrum-women", num:"18", name:"Centrum Silver Women 50+", price:"$14.96", cat:"supplements", badge:"demand",
     desc:"Centrum multivitamin gummies for women 50 and over — 140 count.",
     link:"https://www.amazon.com/Centrum-Silver-Multivitamin-Multimineral-Supplement/dp/B0BPPX6LRS?dib=eyJ2IjoiMSJ9.__9XZHoOXgnkWPHDvlj3RQZXvvMmx_ewhRXyCNppV1yhWpN0PH4NPGfNDBurbWQUlSZBhzwc2K1Unzvi9MDg8ycQ7aKKg8NQ1au_LlmaVWzEY7dmey9Gk-ZbBRtthWNdSS86U_tUkcCdLRxjTzF13ndYGJoWVDAE6EFnL0UCFUJ2E2OKz-ln_TJmSrzlGhzBTYsa2Ek6JA-F3_FGltFQax0_jPgZBAJS0CeOds1qBRv76UwfxNC5dfgkIMESnEtS6kF6uqKnc57RlwHNRw6gN26KI2H9kuTuob1TUkOqBI.yoMZIkmf_4OSnNZ-IyufSJwaFRY7_uXbWzvBSbq8qe4&dib_tag=se&keywords=Centrum%2BSilver%2BWomen%2B50%2B&qid=1788696977&sr=8-4&th=1&linkCode=ll2&tag=a0973971-20&linkId=f42a72f6590894c8ea38e09f6f9355b6&language=en_US&gaOptInStatus=true&ref_=as_li_ss_tl" },
-  { id:"d3", num:"19", name:"Doctor's Best Vitamin D3", art:["bottle"], price:"$13.99", cat:"supplements", badge:"demand",
-    desc:"Doctor's Best vitamin D3 5000 IU softgels for men and women — 360 softgels.",
+  { id:"d3", num:"19", name:"Doctor's Best Vitamin D3", price:"$13.99", cat:"supplements", badge:"demand",
+    desc:"Doctor's Best vitamin D3 5000 IU softgels — 360 softgels.",
     link:"https://www.amazon.com/Doctors-Vitamin-Healthy-Support-Gluten-Free/dp/B0050MYHBQ?dib=eyJ2IjoiMSJ9.aPFc28IT-uakNEOYq4ltitt5pc-WMhxcNb9SoKyzgCZDLaEaepISFrT8yZzGOqgX_4GidHD0XiM8caxiZQE8jNaTDXlBT2_vv_Z0jW8czxIFMnQU2pDJdsvuG12OeeqdEtw0axvUk-mTMqj5TnXHtvpZ0VuJmsWsRg58SVvQMqWT1YMoiVXZp7EXNai3yhiFh2SgG7V3MkfW1d0GJ0fMkBbWo0GJHs6MR39maCP6ejDydmE40-2ZtyEPBEQPan23iiJzgZcipPwzObNJIjIYVIJWGTNks7CllpeE25Crqqwtx0.NTy8mzUHWj7UrebfOt7wkCRpgghZ6Dm9isyUI37l4ZY&dib_tag=se&keywords=NatureWise%2BVitamin%2BD3%2B5000%2BIU&qid=1788697359&sr=8-16&th=1&linkCode=ll2&tag=a0973971-20&linkId=c31c216de58bbda3351c9b12bd1f3fb1&language=en_US&gaOptInStatus=true&ref_=as_li_ss_tl" },
-  { id:"magnesium", num:"20", name:"Magnesium 500 mg", art:["bottle"], price:"$14.94", cat:"supplements", badge:"demand",
-    desc:"Nature's Bounty magnesium supplements 500 mg tablets — 200 count.",
+  { id:"magnesium", num:"20", name:"Magnesium 500 mg", price:"$14.94", cat:"supplements", badge:"demand",
+    desc:"Nature's Bounty magnesium 500 mg tablets — 200 count.",
     link:"https://www.amazon.com/Natures-Bounty-Magnesium-Muscle-Tablets/dp/B08C65K2WC?dib=eyJ2IjoiMSJ9.nSNd--KgQ1eHOH49GNS3aehhu9LkLdAZPlMDPoaaYAcmTI6xyAY9ehoKzqlchDawLD3eFO9LxoOduitX0E2YtW5huposJ-oAG5R18Uqv4DIDjbt3fEMJPUuUK252uzWxgch1V-X4Lo_R0qjJClY0KfMxBUQRpzJZSHsrfrB2gZV2pruTqQ-S1XLbqwCqEeyvXjTMGmFtq80nvzVATuG7qTJ9eNRSPDg5xtS5P3HB8tOUg7FBgisSGNMthC-qLYZMV--PkocJBMsJn2duPZBWimpy3LZiyTmoZYMRDn0vM.1DuHZGDuxB1cvVyqZ8WOF6XyQ0eNmFgsgOcDaxRwY8&dib_tag=se&keywords=Nature%27s%2BBounty%2BMagnesium&qid=1788697742&sr=8-3&th=1&linkCode=ll2&tag=a0973971-20&linkId=c9658183f4759ed50f8db37555835400&language=en_US&gaOptInStatus=true&ref_=as_li_ss_tl" },
-  { id:"fishoil", num:"21", name:"Fish Oil Omega-3", art:["bottle"], price:"$22.80", cat:"supplements", badge:"demand",
-    desc:"Nature's Bounty fish oil omega-3 supplements — 1200 mg, 200 softgels (pack of 2).",
+  { id:"fishoil", num:"21", name:"Fish Oil Omega-3", price:"$22.80", cat:"supplements", badge:"demand",
+    desc:"Nature's Bounty fish oil omega-3 — 1200 mg, 200 softgels (pack of 2).",
     link:"https://www.amazon.com/dp/B0DZP3DGL9?sp_csd=d2lkZ2V0TmFtZT1zcF9ocXBfc2hhcmVk&th=1&linkCode=ll2&tag=a0973971-20&linkId=4a8d26b676b16b692ba41ead829c572d&language=en_US&gaOptInStatus=true&ref_=as_li_ss_tl" },
-  { id:"liquidiv", num:"22", name:"Liquid I.V. Hydration", art:["sachet"], price:"$24.00", cat:"supplements", badge:"demand",
+  { id:"liquidiv", num:"22", name:"Liquid I.V. Hydration", price:"$24.00", cat:"supplements", badge:"demand",
     desc:"Liquid I.V. hydration multiplier electrolyte powder, lemon lime — 16 count.",
     link:"https://www.amazon.com/Liquid-I-V-Multiplier-Electrolyte-Supplement/dp/B01IT9NLHW?dib=eyJ2IjoiMSJ9.utaz4Ao70Hns4_Avt4yFwH64kGmAmaruhv68PtxuUdlua1R_c1RqJf8AQOI1OAc8Kf5gLJwJpVgjflE4X-daSwnwsHBqTdyvoYNU1Bp6phikdQ7LBkX5Bzb7Ficwxkepvi7I_LnEjwOveLFiFWSnT2fQoVnJ5qjm1_r5cMmr8i2iMPV38guoofOmADOyTbKOp6o_K4aULapICmuf_hyBs-kD-SUTyUnAMvF1-LMbEp6pJxgyT0-qtyx6GeDF8FPs9_opSnGm8QNcgOjedbclJ1H0jl8dWgSU0hVnJQ.lJ8dcr7vZauG8k74lIFn_pIe7i24CF-otpecxfuZFk&dib_tag=se&keywords=Liquid%2BI.V.%2BHydration%2BMultiplier&qid=1788697993&sr=8-1&th=1&linkCode=ll2&tag=a0973971-20&linkId=a1a8594b5e435e00fa1d1a5412c12405&language=en_US&gaOptInStatus=true&ref_=as_li_ss_tl" },
-  { id:"calcium", num:"23", name:"Calcium + D3", art:["bottle"], price:"$14.89", cat:"supplements", badge:"demand",
+  { id:"calcium", num:"23", name:"Calcium + D3", price:"$14.89", cat:"supplements", badge:"demand",
     desc:"Nature's Bounty calcium 1200 mg with vitamin D3 — 220 softgels.",
     link:"https://www.amazon.com/Natures-Bounty-Carbonate-Supplement-Supports/dp/B002Q16VVS?dib=eyJ2IjoiMSJ9.FVo4fTwUAppyxq6YWYs3r5VEJ9-E7jeLEmoNe7Iaf-moLSAT7tGBYnksTLHY-lcx9C7z6S4wDK1Nu9LJD6K_Q6bcrIuwdSjsdKDQhQ-D-ytlHXwIMRX2HiEIpUR4l1n89xsAhQ9sKIi7vI6ipV7vMyWepKrqgE2-YcMYTUyTdWjXW0tEE9jXawZGlZkbO1rIUsjmNeFN_n-z6QUHkgRXFhwl1q_nFrGrbtLtN7vvcz6gZ0rtb1oXRCOXv7TKFU3iD1iQOSSTbZ74rIUGWvSzmumXiy5okbVDra7QifJw.-tyhPHuXuUa7ZZnRwkw5PCQ9utE-pf6T7tTZRlJya8c&dib_tag=se&keywords=Nature%2BMade%2BCalcium&qid=1788698531&sr=8-10&th=1&linkCode=ll2&tag=a0973971-20&linkId=df0baa6b3480761a1e1fa49605ca7ca1&language=en_US&gaOptInStatus=true&ref_=as_li_ss_tl" },
-  { id:"b12", num:"24", name:"Vitamin B12 1000 mcg", art:["bottle"], price:"$17.48", cat:"supplements", badge:"demand",
-    desc:"Nature Made vitamin B12 1000 mcg softgels, energy metabolism support — 150 count.",
+  { id:"b12", num:"24", name:"Vitamin B12 1000 mcg", price:"$17.48", cat:"supplements", badge:"demand",
+    desc:"Nature Made vitamin B12 1000 mcg softgels — 150 count.",
     link:"https://www.amazon.com/Nature-Made-Vitamin-Softgels-Value/dp/B00DS5BGDY?dib=eyJ2IjoiMSJ9.lmX3aJYyX5cz0defYtHwiLi5FQSuyeH_BNYKodUfrfmyGrLGnq7gxYMWcMdq6q2RvXDEOPM26XFrucIMfffoiBgXr-yCLw7brEyZUPmclQZyIiHYqIcra58R8kg5IBVlkTVKlaF-mUkSesXPCSRPx436gnw-DEet1uXi8_rOedgohe2NCfGibPB7s-tGp-9hDOuIdRpg1_jrzJ1yyOck0yLNOlL_cstg6J3ctmnIxFNib8uoS_3WSNuaD2S_Igl3DDLHEfRFp-4Tkb8n4H0ANdCOKSxX10jsw0Z2TO0.XOPL8OFRx914TqtR6-Z45gJFOck8mu_YlhD69_8bHm8&dib_tag=se&keywords=Nature%2BMade%2BVitamin%2BB12&qid=1788697496&sr=8-1&th=1&linkCode=ll2&tag=a0973971-20&linkId=0cc27e46d2207a0ce5a8f94db7bff6ac&language=en_US&gaOptInStatus=true&ref_=as_li_ss_tl" },
-  { id:"coq10", num:"25", name:"Qunol Ultra CoQ10", art:["bottle"], price:"$18.96", cat:"supplements", badge:"demand",
-    desc:"Qunol Ultra CoQ10 100 mg with 3× better absorption, antioxidant — 60 softgels.",
+  { id:"coq10", num:"25", name:"Qunol Ultra CoQ10", price:"$18.96", cat:"supplements", badge:"demand",
+    desc:"Qunol Ultra CoQ10 100 mg with 3× better absorption — 60 softgels.",
     link:"https://www.amazon.com/Qunol-Absorption-Patented-Supplement-Antioxidant/dp/B00L2HYSQC?dib=eyJ2IjoiMSJ9.OLmDJZ-8f9dx7twvJyHid4A96Q0OmVqg_TJaovqXkMJ3gik3m9WLH5zn0J4D6u4zi5SM8JJeNP01vGdycDrTL39Bt98ACgGZcZ-cutZPAUD8iQwRxiYIVr-r3CJs8UvTPbMvI5SghRF-v4u7BcKoNo08ix3QOSVc9wfAExlmc9h9c81WULtER3kZczchXe1Ys1hi6dt7X3dfU_B0MP3DV1uWLxaTVVDb-ZZer9U8HzJUbSENGjPKQVSW12He4BARfH9OQ-gQuIr7iKllDkYtrkgnlrGuVAUXgQSUekAqbeGHo.f3YC8BbFbaiCS0zwCc63KuOxVvfzs99iRbRKPgjbJo&dib_tag=se&keywords=Qunol%2BCoQ10&qid=1788698183&sr=8-8&th=1&linkCode=ll2&tag=a0973971-20&linkId=e16c04057fe51dc71a13e13ec45f7f92&language=en_US&gaOptInStatus=true&ref_=as_li_ss_tl" }
-];
-
-const FEATURED = [
-  { id:"bands",  note:"The best ten dollars in home fitness — five tensions, endless progressions." },
-  { id:"ihealth",note:"Numbers you can trust, synced to the phone you already carry." },
-  { id:"whey",   note:"The protein our own editors mix every morning." }
-];
-
-const SOCIAL_LINKS = [
-  { name:"Instagram", handle:"@draverycarter", icon:"instagram", url:"https://www.instagram.com/draverycarter/",
-    blurb:"Daily wellness rituals, product notes, and the occasional behind-the-scenes." },
-  { name:"YouTube", handle:"Dr. VAYRON", icon:"youtube", url:"https://www.youtube.com/channel/UCqq7fnNB4zcT0wnUzZEbZyA",
-    blurb:"Long-form guides on healthy aging, nutrition, and everyday strength." }
 ];
 
 /* ================= END OF EDITABLE CONTENT ================= */
@@ -924,454 +733,35 @@ const ICONS = {
   youtube:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"><rect x="3" y="6" width="18" height="12" rx="4"/><path d="M10.5 9.5l4.5 2.5-4.5 2.5z" fill="currentColor" stroke="none"/></svg>'
 };
 
-/* ---------- Studio product render system (photo fallback) ---------- */
-function sh(hex,t){
-  var n=parseInt(hex.slice(1),16),r=(n>>16)&255,g=(n>>8)&255,b=n&255,m=t<0?0:255,a=Math.abs(t);
-  r=Math.round(r+(m-r)*a);g=Math.round(g+(m-g)*a);b=Math.round(b+(m-b)*a);
-  return "#"+((1<<24)+(r<<16)+(g<<8)+b).toString(16).slice(1);
-}
-function lin(id,st,v){
-  return '<linearGradient id="'+id+'" '+(v?'x1="0" y1="0" x2="0" y2="1"':'x1="0" y1="0" x2="1" y2="0"')+'">'+
-    st.map(function(s){return '<stop offset="'+s[0]+'" stop-color="'+s[1]+'"'+(s[2]!=null?' stop-opacity="'+s[2]+'"':'')+'/>';}).join("")+'</linearGradient>';
-}
-function radg(id,st,cx,cy,r){
-  return '<radialGradient id="'+id+'" cx="'+(cx||".38")+'" cy="'+(cy||".32")+'" r="'+(r||".8")+'">'+
-    st.map(function(s){return '<stop offset="'+s[0]+'" stop-color="'+s[1]+'"'+(s[2]!=null?' stop-opacity="'+s[2]+'"':'')+'/>';}).join("")+'</radialGradient>';
-}
-function cyl(id,c,gloss){
-  var st = gloss
-    ? [[0,sh(c,-.5)],[.28,sh(c,-.12)],[.45,sh(c,.32)],[.58,sh(c,.22)],[.82,sh(c,-.18)],[1,sh(c,-.55)]]
-    : [[0,sh(c,-.32)],[.15,sh(c,-.08)],[.36,sh(c,.14)],[.5,sh(c,.2)],[.72,sh(c,-.05)],[1,sh(c,-.38)]];
-  return lin(id,st);
-}
-function reflDefs(u,fl){
-  return '<mask id="mk'+u+'"><rect x="0" y="'+fl+'" width="400" height="90" fill="url(#rg'+u+')"/></mask>'+
-    lin("rg"+u,[[0,"#fff",.75],[1,"#fff",0]],true);
-}
-function reflUse(u,fl){
-  return '<use href="#bd'+u+'" transform="translate(0,'+(2*fl)+') scale(1,-1)" opacity=".13" filter="url(#f2)" mask="url(#mk'+u+')"/>';
-}
-function shot(p,defs,body,o){
-  o=o||{};var u=p.id,fl=o.floor||316;
-  return '<svg viewBox="0 0 400 400" role="img" aria-label="'+esc(p.name)+' \u2014 studio product image">'+
-   '<defs>'+
-   '<radialGradient id="bg'+u+'" cx="50%" cy="30%" r="85%"><stop offset="0%" stop-color="#FAF6EC"/><stop offset="52%" stop-color="#F0EADB"/><stop offset="100%" stop-color="#D8D0BA"/></radialGradient>'+
-   '<radialGradient id="sh'+u+'" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#2A2E22" stop-opacity=".32"/><stop offset="55%" stop-color="#2A2E22" stop-opacity=".15"/><stop offset="100%" stop-color="#2A2E22" stop-opacity="0"/></radialGradient>'+
-   lin("ov"+u,[[0,"#000",.3],[.18,"#000",.07],[.5,"#000",0],[.82,"#000",.07],[1,"#000",.3]])+
-   (defs||'')+
-   '</defs>'+
-   '<rect width="400" height="400" fill="url(#bg'+u+')"/>'+
-   '<ellipse cx="200" cy="'+(fl+4)+'" rx="'+(o.srx||110)+'" ry="'+(o.sry||19)+'" fill="url(#sh'+u+')"/>'+
-   body+
-   '<text x="28" y="374" font-family="Manrope,sans-serif" font-size="13" letter-spacing="2.5" fill="#4A4B41" opacity=".5">N\u00B0 '+esc(p.num)+'</text>'+
-   '<text x="372" y="374" text-anchor="end" font-family="Instrument Serif,serif" font-size="16" fill="#4A4B41" opacity=".5">AC</text>'+
-  '</svg>';
-}
-function spills(u,pos,type,c){
-  return pos.map(function(it,i){
-    var col=Array.isArray(c)?c[i%c.length]:c, id="sp"+u+i;
-    var g=radg(id,[[0,sh(col,.3)],[.6,col],[1,sh(col,-.32)]]), shape="";
-    if(type==="softgel") shape='<ellipse cx="'+it.x+'" cy="'+it.y+'" rx="15" ry="9" transform="rotate('+(it.rot||0)+' '+it.x+' '+it.y+')" fill="url(#'+id+')"/>';
-    else if(type==="tablet") shape='<circle cx="'+it.x+'" cy="'+it.y+'" r="10" fill="url(#'+id+')"/><path d="M'+(it.x-5)+' '+it.y+'h10" stroke="rgba(0,0,0,.15)" stroke-width="1.5"/>';
-    else shape='<rect x="'+(it.x-10)+'" y="'+(it.y-8)+'" width="20" height="16" rx="7" transform="rotate('+(it.rot||10)+' '+it.x+' '+it.y+')" fill="url(#'+id+')"/>';
-    return '<g>'+g+'<ellipse cx="'+it.x+'" cy="'+(it.y+8)+'" rx="13" ry="4" fill="#2A2E22" opacity=".18" filter="url(#f4)"/>'+shape+
-      '<ellipse cx="'+(it.x-5)+'" cy="'+(it.y-3)+'" rx="4.5" ry="2.6" fill="#fff" opacity=".7" filter="url(#f2)"/></g>';
-  }).join("");
-}
-var BOTTLE_META = {
-  d3:        {capc:"#3E4A38",band:"#C98A3F",l1:"DOCTOR\u2019S BEST",   l2:"D3",      l2s:24,l3:"5000 IU \u00B7 360 SOFTGELS",  pt:"softgel",pc:"#E2A34C"},
-  magnesium: {capc:"#F1EEE4",band:"#C46A8F",l1:"NATURE\u2019S BOUNTY", l2:"Mg 500",  l2s:15,l3:"MAGNESIUM \u00B7 200 TABLETS",   pt:"tablet", pc:"#F2EFE6"},
-  fishoil:   {capc:"#F1EEE4",band:"#D8B23F",l1:"NATURE\u2019S BOUNTY", l2:"OMEGA-3", l2s:12,l3:"FISH OIL \u00B7 1200 MG",       pt:"softgel",pc:"#D9A94E"},
-  calcium:   {capc:"#F1EEE4",band:"#7A6FA8",l1:"NATURE\u2019S BOUNTY", l2:"Ca + D3", l2s:14,l3:"1200 MG \u00B7 220 SOFTGELS",   pt:"softgel",pc:"#E8E3D2"},
-  b12:       {capc:"#F1EEE4",band:"#C4684F",l1:"NATURE MADE",          l2:"B12",     l2s:24,l3:"1000 MCG \u00B7 150 SOFTGELS", pt:"softgel",pc:"#B2435A"},
-  coq10:     {capc:"#F1EEE4",band:"#D98A2B",l1:"QUNOL",                l2:"CoQ10",   l2s:18,l3:"100 MG \u00B7 60 SOFTGELS",    pt:"softgel",pc:"#D9A24C"}
+/* ---------- Scene image chains: try .jpg/.jpeg/.png, then old posters ---------- */
+var CHAINS = {
+  hero:  ["hero.jpg","hero.jpeg","hero.png","hero-poster.png.png"],
+  story1:["story1.jpg","story1.jpeg","story1.png","hero-poster.png.png"],
+  gvlogo:["gv-logo.png","gv-logo.jpg","gv-logo.jpeg"]
 };
-var JAR_META = {
-  "centrum-men":   {accent:"#4C7EA8",g:["#8A5FA8","#C0688A","#D9A93E"],l3:"MEN 50+ \u00B7 140 GUMMIES"},
-  "centrum-women": {accent:"#C0688A",g:["#C0688A","#D9A93E","#8A5FA8"],l3:"WOMEN 50+ \u00B7 140 GUMMIES"}
-};
-var ART = {};
-ART.bands = function(p){
-  var u=p.id,defs="",body="";
-  var rings=[
-    {x:122,y:212,c:"#D9A93E",r:-7,s:.86},{x:198,y:202,c:"#C75B4A",r:3,s:.95},
-    {x:274,y:212,c:"#7E9B6A",r:8,s:.86},{x:158,y:264,c:"#5B7E9E",r:-5,s:1.02},
-    {x:240,y:268,c:"#33302A",r:6,s:1.02}
-  ];
-  rings.forEach(function(rg,i){
-    var id="rn"+u+i,rx=Math.round(56*rg.s),ry=Math.round(34*rg.s);
-    defs+=cyl(id,rg.c);
-    body+='<g transform="rotate('+rg.r+' '+rg.x+' '+rg.y+')">'+
-      '<ellipse cx="'+rg.x+'" cy="'+rg.y+'" rx="'+rx+'" ry="'+ry+'" fill="url(#'+id+')"/>'+
-      '<ellipse cx="'+rg.x+'" cy="'+rg.y+'" rx="'+(rx-10)+'" ry="'+(ry-7)+'" fill="#E6E0CE"/>'+
-      '<ellipse cx="'+rg.x+'" cy="'+rg.y+'" rx="'+(rx-10)+'" ry="'+(ry-7)+'" fill="none" stroke="'+sh(rg.c,-.45)+'" stroke-width="1.6" opacity=".5"/>'+
-      '<ellipse cx="'+(rg.x-rx*.3)+'" cy="'+(rg.y-ry*.5)+'" rx="'+(rx*.5)+'" ry="'+(ry*.3)+'" fill="#fff" opacity=".4" filter="url(#f4)"/>'+
-    '</g>';
-  });
-  return shot(p,defs,body,{floor:300,srx:130,sry:26});
-};
-ART.dumbbell = function(p){
-  var u=p.id,sage="#8FA07E",dark="#2A2B25";
-  var defs=cyl("hb"+u,dark)+radg("w1"+u,[[0,sh(sage,.3)],[.6,sage],[1,sh(sage,-.38)]])+radg("w2"+u,[[0,sh(sage,.15)],[.6,sh(sage,-.08)],[1,sh(sage,-.45)]]);
-  var grip="";[246,256,266,276,286,296,306].forEach(function(y){grip+='<path d="M188 '+y+'h16"/>';});
-  var body=
-    '<ellipse cx="190" cy="212" rx="88" ry="10" fill="#2A2E22" opacity=".16" filter="url(#f4)"/>'+
-    '<g transform="translate(190,178) rotate(-6)">'+
-      '<rect x="-62" y="-11" width="124" height="22" rx="11" fill="url(#hb'+u+')"/>'+
-      '<circle cx="-64" cy="0" r="30" fill="url(#w2'+u+')"/>'+
-      '<circle cx="64" cy="0" r="30" fill="url(#w2'+u+')"/>'+
-      '<ellipse cx="-72" cy="-11" rx="10" ry="6" fill="#fff" opacity=".22" filter="url(#f2)"/>'+
-      '<ellipse cx="56" cy="-11" rx="10" ry="6" fill="#fff" opacity=".16" filter="url(#f2)"/>'+
-    '</g>'+
-    '<rect x="186" y="238" width="20" height="78" rx="10" fill="url(#hb'+u+')"/>'+
-    '<g stroke="rgba(255,255,255,.14)" stroke-width="2">'+grip+'</g>'+
-    '<circle cx="196" cy="222" r="40" fill="url(#w1'+u+')"/>'+
-    '<circle cx="196" cy="288" r="40" fill="url(#w1'+u+')"/>'+
-    '<ellipse cx="181" cy="208" rx="13" ry="8" fill="#fff" opacity=".4" filter="url(#f4)"/>'+
-    '<ellipse cx="181" cy="274" rx="13" ry="8" fill="#fff" opacity=".3" filter="url(#f4)"/>';
-  return shot(p,defs,body,{floor:330,srx:72,sry:12});
-};
-ART.strap = function(p){
-  var u=p.id,tan="#D3B36A";
-  var path='M66 336 C 138 306 178 262 208 214 S 296 148 334 124';
-  var loops="";[[92,323],[126,297],[160,266],[194,231],[228,196],[262,163],[296,138]].forEach(function(c){
-    loops+='<g transform="rotate(-38 '+c[0]+' '+c[1]+')">'+
-      '<ellipse cx="'+c[0]+'" cy="'+c[1]+'" rx="8.5" ry="15" fill="'+sh(tan,-.12)+'" stroke="'+sh(tan,-.5)+'" stroke-width="2"/>'+
-      '<ellipse cx="'+c[0]+'" cy="'+c[1]+'" rx="5" ry="10" fill="#E6DDBE"/></g>';
-  });
-  var body=
-    '<path d="'+path+'" stroke="'+sh(tan,-.28)+'" stroke-width="40" fill="none" stroke-linecap="round"/>'+
-    '<path d="'+path+'" stroke="'+tan+'" stroke-width="30" fill="none" stroke-linecap="round"/>'+
-    '<path d="'+path+'" transform="translate(0,-8)" stroke="#fff" stroke-width="7" fill="none" stroke-linecap="round" opacity=".3" filter="url(#f2)"/>'+
-    '<path d="'+path+'" stroke="rgba(90,70,30,.35)" stroke-width="1.5" fill="none" stroke-dasharray="6 7"/>'+
-    loops;
-  return shot(p,"",body,{floor:308,srx:124,sry:22});
-};
-ART.socks = function(p){
-  var u=p.id,knit="#F1EDE2",sage="#AAB795";
-  var defs=cyl("k"+u,knit)+cyl("cf"+u,sage);
-  var dots="";
-  [64,80,96,112,126].forEach(function(x){[200,213,226].forEach(function(y){
-    if(x<130||y<226) dots+='<circle cx="'+x+'" cy="'+y+'" r="3.4" fill="#7E9B6A" opacity=".85"/>';
-  });});
-  [24,38].forEach(function(x){[206,216].forEach(function(y){dots+='<circle cx="'+x+'" cy="'+y+'" r="3.4" fill="#7E9B6A" opacity=".85"/>';});});
-  function sock(tx,ty,rot,back){
-    return '<g transform="translate('+tx+' '+ty+') rotate('+rot+')"'+(back?' opacity=".95"':'')+'>'+
-      '<path d="M8 30 L52 30 L52 158 Q52 174 68 180 L124 197 Q142 204 139 217 Q136 230 118 227 L42 210 Q20 205 16 186 Q10 110 8 30 Z" fill="url(#k'+u+')"/>'+
-      '<path d="M124 197 Q142 204 139 217 Q136 230 118 227 L104 224 Q118 210 124 197 Z" fill="'+sh(knit,-.14)+'"/>'+
-      '<path d="M16 186 Q12 196 22 202 L42 210 Q28 202 16 186 Z" fill="'+sh(knit,-.18)+'" opacity=".6"/>'+
-      '<rect x="0" y="0" width="60" height="32" rx="14" fill="url(#cf'+u+')"/>'+
-      '<ellipse cx="30" cy="31" rx="27" ry="6" fill="'+sh(sage,-.25)+'"/>'+
-      '<g>'+dots+'</g>'+
-      '<path d="M16 44 L48 44 L47 150" stroke="#fff" stroke-width="7" opacity=".3" fill="none" stroke-linecap="round" filter="url(#f2)"/>'+
-    '</g>';
-  }
-  var body=
-    '<ellipse cx="110" cy="306" rx="82" ry="9" fill="#2A2E22" opacity=".14" filter="url(#f4)"/>'+
-    sock(2,118,-14,true)+
-    '<ellipse cx="150" cy="320" rx="92" ry="10" fill="#2A2E22" opacity=".18" filter="url(#f4)"/>'+
-    sock(64,88,3,false);
-  return shot(p,defs,body,{floor:322,srx:108,sry:16});
-};
-ART.bp = function(p,o){
-  var u=p.id,k=(o.v==="k");
-  var bodyC=k?"#333832":"#F5F2EA";
-  var defs=cyl("dv"+u,bodyC,k)+cyl("cf"+u,"#B9BFC2");
-  var body=
-    '<path d="M204 230 C 204 260 236 256 246 282" stroke="#9AA4A0" stroke-width="7" fill="none" stroke-linecap="round"/>'+
-    '<rect x="116" y="112" width="168" height="112" rx="18" fill="url(#dv'+u+')"/>'+
-    '<rect x="116" y="112" width="168" height="112" rx="18" fill="url(#ov'+u+')"/>'+
-    '<rect x="136" y="126" width="92" height="52" rx="7" fill="#171C15"/>'+
-    '<text x="182" y="152" text-anchor="middle" font-family="Manrope,sans-serif" font-weight="700" font-size="15" fill="#A9E8A0">124/78</text>'+
-    '<text x="182" y="170" text-anchor="middle" font-family="Manrope,sans-serif" font-size="9" fill="#7BA074">\u2665 72 BPM</text>'+
-    '<circle cx="254" cy="142" r="10" fill="'+(k?"#AA6340":"#546849")+'"/>'+
-    '<rect x="242" y="162" width="24" height="8" rx="4" fill="rgba(0,0,0,.18)"/>'+
-    '<rect x="242" y="176" width="24" height="8" rx="4" fill="rgba(0,0,0,.18)"/>'+
-    '<text x="148" y="212" font-family="Manrope,sans-serif" font-size="9" letter-spacing="2" fill="'+(k?"#C9CFC5":"#57584E")+'">'+(k?"KONQUEST":"iHEALTH")+'</text>'+
-    '<rect x="126" y="116" width="10" height="104" rx="5" fill="#fff" opacity="'+(k?".12":".5")+'" filter="url(#f2)"/>'+
-    '<g transform="rotate(-4 196 288)">'+
-      '<ellipse cx="196" cy="288" rx="98" ry="32" fill="url(#cf'+u+')"/>'+
-      '<ellipse cx="196" cy="288" rx="66" ry="20" fill="#CBD3D6"/>'+
-      '<ellipse cx="196" cy="292" rx="62" ry="17" fill="#B3BCC0"/>'+
-      '<g stroke="rgba(0,0,0,.15)" stroke-width="2"><path d="M118 278h44M234 278h44M124 298h34M232 298h34"/></g>'+
-      '<ellipse cx="148" cy="270" rx="30" ry="8" fill="#fff" opacity=".4" filter="url(#f4)"/>'+
-    '</g>';
-  return shot(p,defs,body,{floor:318,srx:120,sry:18});
-};
-ART.scale = function(p){
-  var u=p.id;
-  var defs=cyl("bs"+u,"#2B2D28")+lin("tp"+u,[[0,"#C9CFCB"],[.3,"#F4F7F4"],[.55,"#E4EAE5"],[1,"#B9C1BB"]]);
-  var body=
-    '<rect x="106" y="258" width="188" height="52" rx="14" fill="url(#bs'+u+')"/>'+
-    '<rect x="146" y="278" width="108" height="18" rx="4" fill="#0F120D"/>'+
-    '<text x="200" y="291" text-anchor="middle" font-family="Manrope,sans-serif" font-weight="700" font-size="11" letter-spacing="1.5" fill="#9FE8A8">0.0 OZ</text>'+
-    '<clipPath id="cp'+u+'"><rect x="98" y="228" width="204" height="36" rx="10"/></clipPath>'+
-    '<rect x="98" y="228" width="204" height="36" rx="10" fill="url(#tp'+u+')"/>'+
-    '<g clip-path="url(#cp'+u+')">'+
-      '<rect x="118" y="222" width="16" height="52" fill="#fff" opacity=".55" filter="url(#f2)" transform="rotate(18 126 248)"/>'+
-      '<rect x="198" y="222" width="8" height="52" fill="#fff" opacity=".35" filter="url(#f2)" transform="rotate(18 202 248)"/>'+
-    '</g>'+
-    '<rect x="98" y="228" width="204" height="36" rx="10" fill="none" stroke="rgba(35,38,31,.22)" stroke-width="1.5"/>';
-  return shot(p,defs,body,{floor:312,srx:110,sry:16});
-};
-ART.tub = function(p){
-  var u=p.id,fl=316;
-  var defs=cyl("cp"+u,"#191B16",true)+cyl("tb"+u,"#14160F",true)+lin("lb"+u,[[0,"#D8B25B"],[.5,"#C9A54B"],[1,"#B28C37"]],true)+reflDefs(u,fl);
-  var ridg="";for(var x=138;x<=262;x+=10)ridg+='<path d="M'+x+' 102v22"/>';
-  var body='<g id="bd'+u+'">'+
-    '<rect x="136" y="82" width="128" height="12" rx="6" fill="url(#cp'+u+')"/>'+
-    '<rect x="130" y="92" width="140" height="32" rx="9" fill="url(#cp'+u+')"/>'+
-    '<g stroke="rgba(255,255,255,.1)" stroke-width="2">'+ridg+'</g>'+
-    '<rect x="140" y="122" width="120" height="194" rx="12" fill="url(#tb'+u+')"/>'+
-    '<rect x="140" y="164" width="120" height="94" fill="url(#lb'+u+')"/>'+
-    '<rect x="140" y="164" width="120" height="94" fill="url(#ov'+u+')"/>'+
-    '<rect x="142" y="164" width="116" height="2" fill="rgba(0,0,0,.2)"/>'+
-    '<rect x="142" y="256" width="116" height="2" fill="rgba(0,0,0,.2)"/>'+
-    '<text x="200" y="188" text-anchor="middle" font-family="Manrope,sans-serif" font-weight="700" font-size="12" letter-spacing="2.6" fill="#2A2314">GOLD STANDARD</text>'+
-    '<text x="200" y="212" text-anchor="middle" font-family="Instrument Serif,serif" font-style="italic" font-size="21" fill="#2A2314">Whey Protein</text>'+
-    '<path d="M162 224h76" stroke="#2A2314" stroke-width="1" opacity=".5"/>'+
-    '<text x="200" y="240" text-anchor="middle" font-family="Manrope,sans-serif" font-size="8" letter-spacing="1.8" fill="#2A2314" opacity=".8">24G PROTEIN \u00B7 2 LB</text>'+
-    '<path d="M158 250 q42 12 84 0" stroke="#B03A2E" stroke-width="3" fill="none" opacity=".85"/>'+
-    '<rect x="152" y="126" width="10" height="188" rx="5" fill="#fff" opacity=".35" filter="url(#f2)"/>'+
-    '<rect x="226" y="126" width="5" height="188" rx="2.5" fill="#fff" opacity=".12" filter="url(#f2)"/>'+
-  '</g>'+reflUse(u,fl);
-  return shot(p,defs,body,{floor:fl,srx:100,sry:17});
-};
-ART.shake = function(p){
-  var u=p.id,fl=316;
-  var defs=cyl("cp"+u,"#3E2A1C")+cyl("tb"+u,"#5C4030")+reflDefs(u,fl);
-  var body='<g id="bd'+u+'">'+
-    '<rect x="168" y="90" width="64" height="14" rx="6" fill="url(#cp'+u+')"/>'+
-    '<path d="M170 102 L230 102 L235 120 L165 120 Z" fill="url(#cp'+u+')"/>'+
-    '<rect x="162" y="118" width="76" height="198" rx="11" fill="url(#tb'+u+')"/>'+
-    '<rect x="162" y="166" width="76" height="90" fill="#F5F1E4"/>'+
-    '<rect x="162" y="166" width="76" height="90" fill="url(#ov'+u+')"/>'+
-    '<rect x="164" y="166" width="72" height="2" fill="rgba(0,0,0,.14)"/>'+
-    '<rect x="164" y="254" width="72" height="2" fill="rgba(0,0,0,.14)"/>'+
-    '<text x="200" y="188" text-anchor="middle" font-family="Manrope,sans-serif" font-weight="700" font-size="9.5" letter-spacing="2" fill="#4A3526">PREMIER</text>'+
-    '<text x="200" y="208" text-anchor="middle" font-family="Manrope,sans-serif" font-weight="700" font-size="14" letter-spacing="1" fill="#4A3526">PROTEIN</text>'+
-    '<text x="200" y="224" text-anchor="middle" font-family="Manrope,sans-serif" font-size="7.5" letter-spacing="1.4" fill="#4A3526" opacity=".8">30G PROTEIN \u00B7 12 PACK</text>'+
-    '<text x="200" y="244" text-anchor="middle" font-family="Instrument Serif,serif" font-style="italic" font-size="13" fill="#6B4A32">Chocolate</text>'+
-    '<rect x="170" y="122" width="7" height="192" rx="3.5" fill="#fff" opacity=".5" filter="url(#f2)"/>'+
-  '</g>'+reflUse(u,fl);
-  return shot(p,defs,body,{floor:fl,srx:78,sry:14});
-};
-ART.blender = function(p){
-  var u=p.id,fl=316;
-  var defs=cyl("bs"+u,"#2A2C28")+cyl("pt"+u,"#E7ECE7")+radg("dl"+u,[[0,"#EDEFF0"],[.7,"#B9BEC4"],[1,"#8E959C"]])+reflDefs(u,fl);
-  var body='<g id="bd'+u+'">'+
-    '<path d="M246 108 q32 6 29 66 l-26 4" fill="none" stroke="#CBD2C7" stroke-width="13" stroke-linecap="round"/>'+
-    '<path d="M246 112 q26 6 24 58" fill="none" stroke="#fff" opacity=".25" stroke-width="4" stroke-linecap="round"/>'+
-    '<rect x="146" y="78" width="108" height="20" rx="9" fill="url(#bs'+u+')"/>'+
-    '<circle cx="200" cy="72" r="10" fill="#33352E"/>'+
-    '<path d="M152 96 L248 96 L238 236 L162 236 Z" fill="url(#pt'+u+')"/>'+
-    '<path d="M166 190 L234 190 L238 236 L162 236 Z" fill="#9FB98E" opacity=".5"/>'+
-    '<path d="M166 190 L234 190" stroke="#7E9B6A" stroke-width="2" opacity=".6"/>'+
-    '<path d="M152 96 L248 96 L238 236 L162 236 Z" fill="url(#ov'+u+')"/>'+
-    '<rect x="136" y="234" width="128" height="82" rx="16" fill="url(#bs'+u+')"/>'+
-    '<rect x="136" y="234" width="128" height="82" rx="16" fill="url(#ov'+u+')"/>'+
-    '<circle cx="200" cy="272" r="17" fill="url(#dl'+u+')"/>'+
-    '<circle cx="200" cy="272" r="9.5" fill="#1E2019"/>'+
-    '<path d="M200 264v8" stroke="#C9CDD3" stroke-width="2"/>'+
-    '<rect x="156" y="292" width="18" height="7" rx="3.5" fill="rgba(255,255,255,.14)"/>'+
-    '<rect x="226" y="292" width="18" height="7" rx="3.5" fill="rgba(255,255,255,.14)"/>'+
-    '<rect x="143" y="238" width="8" height="74" rx="4" fill="#fff" opacity=".16" filter="url(#f2)"/>'+
-  '</g>'+reflUse(u,fl);
-  return shot(p,defs,body,{floor:fl,srx:104,sry:16});
-};
-ART.tumbler = function(p,o){
-  var v=o.v,u=p.id,fl=316;
-  if(v==="hydro"){
-    var d1=cyl("tb"+u,"#6E8F7C",true)+cyl("lp"+u,"#5B7A68",true)+reflDefs(u,fl);
-    var b1='<g id="bd'+u+'">'+
-      '<ellipse cx="200" cy="62" rx="22" ry="12" fill="none" stroke="#3E4A38" stroke-width="8"/>'+
-      '<rect x="150" y="78" width="100" height="30" rx="14" fill="url(#lp'+u+')"/>'+
-      '<rect x="158" y="106" width="84" height="210" rx="13" fill="url(#tb'+u+')"/>'+
-      '<rect x="158" y="106" width="84" height="210" rx="13" fill="url(#ov'+u+')"/>'+
-      '<text x="200" y="206" text-anchor="middle" font-family="Manrope,sans-serif" font-size="7.5" letter-spacing="3" fill="rgba(255,255,255,.55)">HYDRO FLASK</text>'+
-      '<rect x="166" y="110" width="8" height="200" rx="4" fill="#fff" opacity=".4" filter="url(#f2)"/>'+
-    '</g>'+reflUse(u,fl);
-    return shot(p,d1,b1,{floor:fl,srx:82,sry:14});
-  }
-  if(v==="owala"){
-    var d2=cyl("tb"+u,"#5B7FA6",true)+cyl("lw"+u,"#EDEADC")+reflDefs(u,fl);
-    var b2='<g id="bd'+u+'">'+
-      '<circle cx="200" cy="58" r="15" fill="none" stroke="#E3DFCE" stroke-width="7"/>'+
-      '<rect x="152" y="78" width="96" height="26" rx="12" fill="url(#lw'+u+')"/>'+
-      '<rect x="162" y="64" width="18" height="18" rx="8" fill="url(#lw'+u+')"/>'+
-      '<rect x="160" y="104" width="80" height="212" rx="12" fill="url(#tb'+u+')"/>'+
-      '<rect x="160" y="104" width="80" height="212" rx="12" fill="url(#ov'+u+')"/>'+
-      '<rect x="160" y="186" width="80" height="22" fill="#F1EDE2" opacity=".92"/>'+
-      '<rect x="160" y="186" width="80" height="22" fill="url(#ov'+u+')"/>'+
-      '<text x="200" y="201" text-anchor="middle" font-family="Manrope,sans-serif" font-weight="700" font-size="8" letter-spacing="2.5" fill="#4A4B41">OWALA</text>'+
-      '<rect x="168" y="108" width="8" height="202" rx="4" fill="#fff" opacity=".35" filter="url(#f2)"/>'+
-    '</g>'+reflUse(u,fl);
-    return shot(p,d2,b2,{floor:fl,srx:78,sry:13});
-  }
-  var d3=cyl("lp"+u,"#23241F",true)+lin("tb"+u,[[0,sh("#23241F",-.4)],[.3,sh("#23241F",-.05)],[.46,sh("#23241F",.13)],[.72,sh("#23241F",-.12)],[1,sh("#23241F",-.45)]])+reflDefs(u,fl);
-  var b3='<g id="bd'+u+'">'+
-    '<rect x="196" y="44" width="11" height="36" rx="5.5" fill="#55684A"/>'+
-    '<rect x="152" y="74" width="96" height="30" rx="13" fill="url(#lp'+u+')"/>'+
-    '<path d="M178 86h44" stroke="rgba(255,255,255,.12)" stroke-width="2"/>'+
-    '<path d="M160 104 L240 104 L231 316 L169 316 Z" fill="url(#tb'+u+')"/>'+
-    '<path d="M160 104 L240 104 L231 316 L169 316 Z" fill="url(#ov'+u+')"/>'+
-    '<path d="M238 118 q28 4 28 60 q0 56 -28 60" fill="none" stroke="#262720" stroke-width="13"/>'+
-    '<path d="M238 118 q28 4 28 60 q0 56 -28 60" fill="none" stroke="rgba(255,255,255,.08)" stroke-width="4"/>'+
-    '<text x="196" y="212" text-anchor="middle" font-family="Manrope,sans-serif" font-size="7.5" letter-spacing="3.5" fill="rgba(255,255,255,.4)">STANLEY</text>'+
-    '<rect x="170" y="108" width="9" height="200" rx="4.5" fill="#fff" opacity=".18" filter="url(#f2)"/>'+
-  '</g>'+reflUse(u,fl);
-  return shot(p,d3,b3,{floor:fl,srx:84,sry:14});
-};
-ART.grabber = function(p){
-  var u=p.id;
-  var defs=cyl("sf"+u,"#C9CDD3")+cyl("hd"+u,"#3E6FA8",true);
-  var body=
-    '<ellipse cx="212" cy="302" rx="122" ry="15" fill="#2A2E22" opacity=".18" filter="url(#f6)"/>'+
-    '<g transform="rotate(-34 200 200)">'+
-      '<rect x="192" y="72" width="16" height="216" rx="8" fill="url(#sf'+u+')"/>'+
-      '<rect x="194" y="80" width="4" height="200" rx="2" fill="#fff" opacity=".55" filter="url(#f2)"/>'+
-      '<rect x="162" y="34" width="76" height="58" rx="17" fill="url(#hd'+u+')"/>'+
-      '<rect x="162" y="34" width="76" height="58" rx="17" fill="url(#ov'+u+')"/>'+
-      '<g stroke="rgba(255,255,255,.3)" stroke-width="2.5" fill="none"><path d="M170 58q8 6 0 12"/><path d="M182 58q8 6 0 12"/><path d="M194 58q8 6 0 12"/></g>'+
-      '<path d="M226 90 l28 10 l-7 30 l-21 -9 z" fill="url(#hd'+u+')"/>'+
-      '<path d="M186 282 q-34 -12 -50 26 q-5 14 9 16 l34 -24 z" fill="url(#hd'+u+')"/>'+
-      '<path d="M214 282 q34 -12 50 26 q5 14 -9 16 l-34 -24 z" fill="url(#hd'+u+')"/>'+
-      '<rect x="128" y="316" width="18" height="12" rx="5" fill="#23241F" transform="rotate(24 137 322)"/>'+
-      '<rect x="254" y="316" width="18" height="12" rx="5" fill="#23241F" transform="rotate(-24 263 322)"/>'+
-    '</g>';
-  return shot(p,defs,body,{floor:314,srx:120,sry:16});
-};
-ART.light = function(p){
-  var u=p.id;
-  var defs=radg("gl"+u,[[0,"#FFDF9A",.55],[1,"#FFDF9A",0]],".5",".5",".5")+
-           radg("gp"+u,[[0,"#FFD98A",.3],[1,"#FFD98A",0]],".5",".5",".5")+
-           cyl("bd"+u,"#F4F1E8");
-  var body=
-    '<ellipse cx="200" cy="300" rx="150" ry="34" fill="url(#gp'+u+')" filter="url(#f9)"/>'+
-    '<ellipse cx="200" cy="186" rx="128" ry="64" fill="url(#gl'+u+')"/>'+
-    '<rect x="104" y="160" width="192" height="50" rx="25" fill="url(#bd'+u+')"/>'+
-    '<rect x="104" y="160" width="192" height="50" rx="25" fill="url(#ov'+u+')"/>'+
-    '<rect x="130" y="173" width="124" height="24" rx="12" fill="#FFF1C9"/>'+
-    '<rect x="136" y="177" width="112" height="16" rx="8" fill="#FFE9AE"/>'+
-    '<rect x="104" y="160" width="28" height="50" rx="25" fill="rgba(0,0,0,.07)"/>'+
-    '<rect x="268" y="160" width="28" height="50" rx="25" fill="rgba(0,0,0,.07)"/>'+
-    '<circle cx="281" cy="185" r="3.5" fill="#AA6340"/>'+
-    '<rect x="122" y="176" width="10" height="18" rx="5" fill="#fff" opacity=".6" filter="url(#f2)"/>';
-  return shot(p,defs,body,{floor:300,srx:118,sry:20});
-};
-ART.mat = function(p){
-  var u=p.id;
-  var defs=radg("sc"+u,[[0,"#D9E1E5"],[.75,"#AFBEC6"],[1,"#8FA2AC"]]);
-  var cups="";
-  for(var y=192;y<=284;y+=15.5){for(var x=118;x<=282;x+=16.4){
-    cups+='<circle cx="'+x.toFixed(1)+'" cy="'+y.toFixed(1)+'" r="5.2" fill="url(#sc'+u+')"/>'+
-          '<circle cx="'+(x-1.6).toFixed(1)+'" cy="'+(y-1.6).toFixed(1)+'" r="1.4" fill="#fff" opacity=".75"/>';
-  }}
-  var body=
-    '<rect x="100" y="172" width="200" height="128" rx="30" fill="#E8EDF0" fill-opacity=".6" stroke="#B9C6CC" stroke-width="2.5"/>'+
-    '<rect x="108" y="180" width="184" height="112" rx="24" fill="none" stroke="#fff" stroke-width="1.5" opacity=".55"/>'+
-    cups;
-  return shot(p,defs,body,{floor:300,srx:112,sry:20});
-};
-ART.jar = function(p){
-  var u=p.id,fl=316,m=JAR_META[p.id]||{},acc=m.accent||"#4C7EA8";
-  var defs=cyl("cp"+u,"#EDEAE0")+cyl("bw"+u,"#F5F2E9")+reflDefs(u,fl);
-  var ridg="";for(var x=136;x<=264;x+=12)ridg+='<path d="M'+x+' 108v32"/>';
-  var body='<g id="bd'+u+'">'+
-    '<rect x="132" y="128" width="136" height="188" rx="18" fill="url(#bw'+u+')"/>'+
-    '<rect x="126" y="106" width="148" height="30" rx="10" fill="url(#cp'+u+')"/>'+
-    '<rect x="124" y="100" width="152" height="12" rx="6" fill="url(#cp'+u+')"/>'+
-    '<g stroke="rgba(0,0,0,.18)" stroke-width="2">'+ridg+'</g>'+
-    '<rect x="132" y="176" width="136" height="92" fill="#E3E5DD"/>'+
-    '<rect x="132" y="176" width="136" height="92" fill="url(#ov'+u+')"/>'+
-    '<path d="M132 228 q34 -20 68 0 t68 0 v40 h-136 z" fill="'+acc+'" opacity=".92"/>'+
-    '<path d="M132 228 q34 -20 68 0 t68 0" fill="none" stroke="rgba(255,255,255,.4)" stroke-width="2"/>'+
-    '<text x="200" y="198" text-anchor="middle" font-family="Manrope,sans-serif" font-size="10" letter-spacing="3" fill="#4A4B41">CENTRUM</text>'+
-    '<text x="200" y="218" text-anchor="middle" font-family="Instrument Serif,serif" font-style="italic" font-size="16" fill="#3E3F38">Silver</text>'+
-    '<text x="200" y="252" text-anchor="middle" font-family="Manrope,sans-serif" font-weight="700" font-size="9" letter-spacing="1.6" fill="#FCFAF2">'+esc(m.l3||"")+'</text>'+
-    '<rect x="141" y="134" width="9" height="180" rx="4.5" fill="#fff" opacity=".5" filter="url(#f2)"/>'+
-  '</g>'+reflUse(u,fl)+
-  spills(u,[{x:150,y:302,rot:14},{x:194,y:310,rot:-8},{x:236,y:301,rot:22},{x:214,y:296,rot:-20}],"gummy",m.g||["#C0688A"]);
-  return shot(p,defs,body,{floor:fl,srx:102,sry:16});
-};
-ART.bottle = function(p,o){
-  var m=BOTTLE_META[p.id]||{},u=p.id,fl=316;
-  var band=m.band||"#C98A3F";
-  var defs=cyl("cp"+u,m.capc||o.cap||"#F1EEE4")+cyl("bw"+u,"#F3F0E6")+
-    lin("lb"+u,[[0,sh(band,.14)],[1,sh(band,-.16)]],true)+reflDefs(u,fl);
-  var ridg="";for(var x=160;x<=240;x+=10)ridg+='<path d="M'+x+' 90v26"/>';
-  var tcol="#2E2A22";
-  var body='<g id="bd'+u+'">'+
-    '<rect x="158" y="74" width="84" height="14" rx="6" fill="url(#cp'+u+')"/>'+
-    '<rect x="152" y="86" width="96" height="30" rx="8" fill="url(#cp'+u+')"/>'+
-    '<g stroke="rgba(0,0,0,.2)" stroke-width="2">'+ridg+'</g>'+
-    '<path d="M160 114 L240 114 L247 131 L153 131 Z" fill="url(#cp'+u+')"/>'+
-    '<rect x="148" y="129" width="104" height="187" rx="13" fill="url(#bw'+u+')"/>'+
-    '<rect x="148" y="170" width="104" height="98" fill="url(#lb'+u+')"/>'+
-    '<rect x="148" y="170" width="104" height="98" fill="url(#ov'+u+')"/>'+
-    '<rect x="150" y="170" width="100" height="2" fill="rgba(0,0,0,.16)"/>'+
-    '<rect x="150" y="266" width="100" height="2" fill="rgba(0,0,0,.16)"/>'+
-    '<text x="200" y="192" text-anchor="middle" font-family="Manrope,sans-serif" font-size="8.5" letter-spacing="1.8" fill="'+tcol+'" opacity=".85">'+esc(m.l1||"")+'</text>'+
-    '<text x="200" y="218" text-anchor="middle" font-family="Manrope,sans-serif" font-weight="700" font-size="'+(m.l2s||20)+'" letter-spacing="1" fill="'+tcol+'">'+esc(m.l2||o.main||"")+'</text>'+
-    '<text x="200" y="238" text-anchor="middle" font-family="Manrope,sans-serif" font-size="7.5" letter-spacing="1.4" fill="'+tcol+'" opacity=".8">'+esc(m.l3||o.sub||"")+'</text>'+
-    '<path d="M172 250h56" stroke="'+tcol+'" stroke-width="1" opacity=".45"/>'+
-    '<rect x="161" y="133" width="9" height="179" rx="4.5" fill="#fff" opacity=".55" filter="url(#f2)"/>'+
-    '<rect x="231" y="133" width="5" height="179" rx="2.5" fill="#fff" opacity=".18" filter="url(#f2)"/>'+
-  '</g>'+reflUse(u,fl);
-  if(m.pt) body+=spills(u,[{x:146,y:300,rot:-16},{x:187,y:308,rot:6},{x:229,y:299,rot:-27}],m.pt,m.pc);
-  return shot(p,defs,body,{floor:fl,srx:94,sry:16});
-};
-ART.sachet = function(p){
-  var u=p.id;
-  var defs=lin("fc"+u,[[0,"#F2F5D8"],[.45,"#DCE4A4"],[1,"#B7C77E"]],true)+
-           lin("bl"+u,[[0,"#E4E9C2"],[1,"#C3D08E"]],true)+
-           lin("br"+u,[[0,"#D6DFAE"],[1,"#A9BA76"]],true);
-  function packText(x,y){
-    return '<text x="'+x+'" y="'+(y-42)+'" text-anchor="middle" font-family="Manrope,sans-serif" font-weight="700" font-size="9" letter-spacing="1" fill="#4A5220">LIQUID I.V.</text>'+
-      '<text x="'+x+'" y="'+(y+38)+'" text-anchor="middle" font-family="Manrope,sans-serif" font-size="7" letter-spacing="1.5" fill="#4A5220" opacity=".85">HYDRATION</text>'+
-      '<text x="'+x+'" y="'+(y+50)+'" text-anchor="middle" font-family="Manrope,sans-serif" font-size="6.5" letter-spacing="1.2" fill="#4A5220" opacity=".7">ELECTROLYTES</text>';
-  }
-  function pack(x,y,w,h,rot,fill){
-    var crimp="";
-    for(var cx=x-w/2+6;cx<=x+w/2-6;cx+=6)
-      crimp+='<path d="M'+cx+' '+(y-h/2+3)+'v9"/>';
-    return '<g transform="rotate('+rot+' '+x+' '+y+')">'+
-      '<rect x="'+(x-w/2)+'" y="'+(y-h/2)+'" width="'+w+'" height="'+h+'" rx="9" fill="'+fill+'"/>'+
-      '<rect x="'+(x-w/2)+'" y="'+(y-h/2-10)+'" width="'+w+'" height="13" rx="4" fill="#9FB05F"/>'+
-      '<g stroke="rgba(0,0,0,.14)" stroke-width="1.5">'+crimp+'</g>'+
-      '<path d="M'+(x-w/2+4)+' '+(y-14)+' q'+(w/2-4)+' -16 '+(w-8)+' 0 v30 q-'+(w/2-4)+' -16 -'+(w-8)+' 0 z" fill="#fff" opacity=".85"/>'+
-      packText(x,y)+
-    '</g>';
-  }
-  var body=
-    '<g>'+pack(150,218,46,182,-7,"url(#bl"+u+")")+'</g>'+
-    '<g>'+pack(252,220,46,184,6,"url(#br"+u+")")+'</g>'+
-    '<g>'+pack(200,214,48,190,2,"url(#fc"+u+")")+'</g>'+
-    '<rect x="182" y="128" width="8" height="170" rx="4" fill="#fff" opacity=".45" filter="url(#f2)" transform="rotate(2 200 214)"/>';
-  return shot(p,defs,body,{floor:312,srx:104,sry:18});
-};
-
-/* ---------- Image chain: PHOTO_MAP -> product image -> images/ folder -> studio render ---------- */
-function artOf(p){
-  var ext = (typeof PHOTO_MAP === "object" && PHOTO_MAP && PHOTO_MAP[p.id]) || p.image;
-  var src = ext || ("images/" + p.id + ".jpg");
-  var pos = p.imgPos ? ' style="object-position:' + esc(p.imgPos) + ';"' : "";
-  return '<img src="' + esc(src) + '" alt="' + esc(p.name) + '" loading="lazy" decoding="async" ' +
-         'data-pid="' + esc(p.id) + '" data-photo="' + (ext ? "ext" : "folder") + '" data-try="0"' + pos + '>';
-}
-var IMG_EXTS = ["jpg", "png", "webp"];
-function studioOf(pid){
-  for (var i = 0; i < PRODUCTS.length; i++){
-    if (PRODUCTS[i].id === pid){
-      var p = PRODUCTS[i], def = p.art || ["bottle", {}];
-      return ART[def[0]](p, def[1] || {});
-    }
-  }
-  return "";
-}
 document.addEventListener("error", function(e){
   var img = e.target;
-  if (!img || img.tagName !== "IMG" || !img.getAttribute || !img.getAttribute("data-photo")) return;
+  if (!img || img.tagName !== "IMG" || !img.getAttribute) return;
+  var key = img.getAttribute("data-chain");
+  if (key){
+    var chain = CHAINS[key];
+    if (chain){
+      var t = parseInt(img.getAttribute("data-try") || "0", 10);
+      if (t < chain.length - 1){
+        img.setAttribute("data-try", String(t + 1));
+        img.src = chain[t + 1];
+        return;
+      }
+      if (key === "gvlogo"){
+        var span = document.createElement("span");
+        span.innerHTML = ICONS.youtube;
+        if (span.firstChild && img.parentNode) img.parentNode.replaceChild(span.firstChild, img);
+      }
+    }
+    return;
+  }
+  /* product image chain */
+  if (!img.getAttribute("data-photo")) return;
   var pid = img.getAttribute("data-pid");
   if (img.getAttribute("data-photo") === "ext"){
     img.setAttribute("data-photo", "folder");
@@ -1379,29 +769,48 @@ document.addEventListener("error", function(e){
     img.src = "images/" + pid + ".jpg";
     return;
   }
-  var t = parseInt(img.getAttribute("data-try") || "0", 10);
-  if (t < IMG_EXTS.length - 1){
-    img.setAttribute("data-try", String(t + 1));
-    img.src = "images/" + pid + "." + IMG_EXTS[t + 1];
+  var IMG_EXTS = ["jpg", "png", "webp"];
+  var tt = parseInt(img.getAttribute("data-try") || "0", 10);
+  if (tt < IMG_EXTS.length - 1){
+    img.setAttribute("data-try", String(tt + 1));
+    img.src = "images/" + pid + "." + IMG_EXTS[tt + 1];
   } else {
-    img.outerHTML = studioOf(pid);
+    var p = null;
+    for (var i = 0; i < PRODUCTS.length; i++) if (PRODUCTS[i].id === pid) p = PRODUCTS[i];
+    if (p) img.src = phOf(p);
   }
 }, true);
 
-/* ---------- Rendering ---------- */
+/* elegant placeholder if a product photo is missing */
+function phOf(p){
+  return 'data:image/svg+xml,'+encodeURIComponent(
+    '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">'+
+    '<rect width="400" height="400" fill="#FAFAF8"/>'+
+    '<rect x="60" y="60" width="280" height="280" rx="26" fill="none" stroke="#C19A6B" stroke-opacity=".28" stroke-width="2"/>'+
+    '<circle cx="200" cy="176" r="52" fill="none" stroke="#C19A6B" stroke-opacity=".5" stroke-width="2.5"/>'+
+    '<text x="200" y="188" text-anchor="middle" font-family="Georgia,serif" font-size="34" fill="#C19A6B" fill-opacity=".75">N&#176;'+p.num+'</text>'+
+    '<text x="200" y="278" text-anchor="middle" font-family="Georgia,serif" font-style="italic" font-size="19" fill="#111" fill-opacity=".55">'+p.name.split(" ").slice(0,2).join(" ")+'</text>'+
+    '<text x="200" y="302" text-anchor="middle" font-family="Arial" font-size="11" letter-spacing="3" fill="#111" fill-opacity=".35">VAYRON</text></svg>');
+}
+function artOf(p){
+  var ext = (typeof PHOTO_MAP === "object" && PHOTO_MAP && PHOTO_MAP[p.id]) || p.image;
+  var src = ext || ("images/" + p.id + ".jpg");
+  return '<img src="' + esc(src) + '" alt="' + esc(p.name) + '" loading="lazy" decoding="async" ' +
+         'data-pid="' + esc(p.id) + '" data-photo="' + (ext ? "ext" : "folder") + '" data-try="0">';
+}
+
+/* ---------- rendering ---------- */
 function renderCategoryBits(){
   $("#megaGrid").innerHTML = CATEGORIES.map(c =>
     '<button class="mega-item" data-cat="' + c.id + '"><span class="mi-num">' + c.num + '</span>' +
     '<span class="mi-body"><strong>' + esc(c.name) + '</strong><em>' + esc(c.tag) + '</em></span>' + ICONS.arrow + '</button>').join("");
-  $("#pillarChips").innerHTML = CATEGORIES.map(c =>
-    '<button class="chip" data-cat="' + c.id + '"><em>' + c.num + '</em>' + esc(c.name) + '</button>').join("");
   $("#mmChips").innerHTML = CATEGORIES.map(c =>
-    '<button class="chip" data-cat="' + c.id + '"><em>' + c.num + '</em>' + esc(c.name) + '</button>').join("");
+    '<button class="mm-chip" data-cat="' + c.id + '">' + esc(c.name) + '</button>').join("");
   $("#footerCats").innerHTML = CATEGORIES.map(c =>
     '<li><button class="fcat" data-cat="' + c.id + '">' + esc(c.name) + '</button></li>').join("");
   $("#categoryRows").innerHTML = CATEGORIES.map((c,i) => {
     const count = PRODUCTS.filter(p=>p.cat===c.id).length;
-    return '<button class="cat-row" data-cat="' + c.id + '" data-reveal style="--d:' + (i*70) + 'ms">' +
+    return '<button class="cat-row" data-cat="' + c.id + '" data-reveal style="--d:' + (i*60) + 'ms">' +
       '<span class="cat-ico">' + ICONS[c.icon] + '</span>' +
       '<span class="cat-name"><em>' + c.num + '</em>' + esc(c.name) + '</span>' +
       '<span class="cat-tag">' + esc(c.tag) + '</span>' +
@@ -1413,27 +822,9 @@ function renderCategoryBits(){
 }
 function footHTML(p){
   return '<div class="card-foot"><span class="card-price">' + esc(p.price) + '</span>' +
-    '<span class="card-cta">View Product ' + ICONS.arrow + '</span></div>';
+    '<span class="card-cta">View product ' + ICONS.arrow + '</span></div>';
 }
 function catLabel(p){ return (CATMAP[p.cat]||{}).name || ""; }
-function renderFeatured(){
-  const items = FEATURED.map(f=>({ p:PRODUCTS.find(x=>x.id===f.id), note:f.note })).filter(x=>x.p);
-  if(!items.length) return;
-  const main = items[0], sides = items.slice(1);
-  let html = '<a class="feat-main" data-reveal href="' + esc(main.p.link) + '" target="_blank" rel="sponsored noopener">' +
-    '<div class="feat-art">' + (main.p.badge?'<span class="badge badge-' + main.p.badge + '">' + BADGES[main.p.badge] + '</span>':'') + artOf(main.p) + '</div>' +
-    '<div class="feat-body"><span class="card-cat">' + esc(catLabel(main.p)) + '</span>' +
-    '<h3 class="feat-name">' + esc(main.p.name) + '</h3>' +
-    '<p class="feat-desc" style="margin-top:12px;color:var(--ink-2);font-size:.95rem">' + esc(main.p.desc) + '</p>' +
-    '<p class="feat-note">\u201C' + esc(main.note) + '\u201D</p>' + footHTML(main.p) + '</div></a>';
-  html += '<div class="feat-side">' + sides.map((s,i) =>
-    '<a class="feat-sm" data-reveal style="--d:' + (140+i*110) + 'ms" href="' + esc(s.p.link) + '" target="_blank" rel="sponsored noopener">' +
-    '<div class="feat-sm-art">' + artOf(s.p) + '</div>' +
-    '<div class="feat-sm-body"><span class="card-cat">' + esc(catLabel(s.p)) + '</span>' +
-    '<h3>' + esc(s.p.name) + '</h3><p class="feat-note" style="margin-top:8px">\u201C' + esc(s.note) + '\u201D</p>' +
-    footHTML(s.p) + '</div></a>').join("") + '</div>';
-  $("#featuredGrid").innerHTML = html;
-}
 function cardHTML(p,i){
   return '<a class="card" style="--i:' + i + '" href="' + esc(p.link) + '" target="_blank" rel="sponsored noopener">' +
     '<div class="card-art">' + (p.badge?'<span class="badge badge-' + p.badge + '">' + BADGES[p.badge] + '</span>':'') + artOf(p) + '</div>' +
@@ -1448,27 +839,36 @@ function renderGrid(cat){
   if(!list.length){
     grid.innerHTML = '<div class="grid-empty"><div class="empty-ico">' + ICONS.brain + '</div>' +
       '<h3>We\u2019re still curating this pillar.</h3>' +
-      '<p>Our editors are reviewing brain games, large-print editions, and cognitive wellness tools. In the meantime, another pillar is a lovely place to start.</p>' +
+      '<p>Our editors are reviewing brain games, large-print editions, and cognitive wellness tools.</p>' +
       '<div class="empty-actions"><button data-cat="strength">Strength &amp; Mobility</button><button data-cat="heart">Heart &amp; Blood Pressure</button></div></div>';
     return;
   }
   grid.innerHTML = list.map(cardHTML).join("");
 }
 function renderSocials(){
-  const mk = s => '<a class="soc" href="' + esc(s.url) + '" target="_blank" rel="noopener">' +
-    '<span class="soc-ico">' + ICONS[s.icon] + '</span>' +
-    '<span class="soc-name serif">' + esc(s.name) + '</span>' +
-    '<span class="soc-handle">' + esc(s.handle) + '</span>' +
-    '<span class="soc-blurb">' + esc(s.blurb) + '</span>' +
-    '<span class="soc-follow">Follow ' + ICONS.arrow + '</span></a>';
+  const mk = s => {
+    var ico = s.logo
+      ? '<img class="soc-logo" src="' + esc(s.logo) + '" data-chain="gvlogo" data-try="0" alt="' + esc(s.name) + ' logo">'
+      : ICONS[s.icon];
+    return '<a class="soc" href="' + esc(s.url) + '" target="_blank" rel="noopener">' +
+      '<span class="soc-ico">' + ico + '</span>' +
+      '<span class="soc-name serif">' + esc(s.name) + '</span>' +
+      '<span class="soc-handle">' + esc(s.handle) + '</span>' +
+      '<span class="soc-blurb">' + esc(s.blurb) + '</span>' +
+      '<span class="soc-follow">' + esc(s.cta || "Follow") + ' ' + ICONS.arrow + '</span></a>';
+  };
   $("#socialGrid").innerHTML = SOCIAL_LINKS.map(mk).join("");
   $("#mmSocials").innerHTML = SOCIAL_LINKS.map(s =>
     '<a href="' + esc(s.url) + '" target="_blank" rel="noopener" aria-label="' + esc(s.name) + '">' + ICONS[s.icon] + '</a>').join("");
-  $("#footerSocials").innerHTML = SOCIAL_LINKS.map(s =>
-    '<a href="' + esc(s.url) + '" target="_blank" rel="noopener" aria-label="' + esc(s.name) + '">' + ICONS[s.icon] + '</a>').join("");
+  $("#footerSocials").innerHTML = SOCIAL_LINKS.map(s => {
+    var inner = s.logo
+      ? '<img src="' + esc(s.logo) + '" data-chain="gvlogo" data-try="0" alt="">'
+      : ICONS[s.icon];
+    return '<a href="' + esc(s.url) + '" target="_blank" rel="noopener" aria-label="' + esc(s.name) + '">' + inner + '</a>';
+  }).join("");
 }
 
-/* ---------- Filtering ---------- */
+/* ---------- filtering ---------- */
 let filterLock = false;
 function setFilter(cat, scrollTo){
   if(filterLock) return;
@@ -1485,20 +885,20 @@ function setFilter(cat, scrollTo){
       void grid.offsetHeight;
       grid.style.height = h1 + "px";
       requestAnimationFrame(function(){ grid.classList.add("on"); });
-      setTimeout(function(){ grid.style.height = ""; filterLock = false; }, 620);
+      setTimeout(function(){ grid.style.height = ""; filterLock = false; }, 560);
     });
-  }, 300);
+  }, 260);
   if(scrollTo) $("#products").scrollIntoView({ behavior: REDUCED ? "auto" : "smooth", block: "start" });
 }
 
-/* ---------- Menus ---------- */
-const navCats = $("#navCats"), catsToggle = $("#catsToggle"), burger = $("#burger");
+/* ---------- menus ---------- */
+const navCats = $("#navCats"), catsToggle = $("#catsToggle"), burger = $("#burger"), nav = $("#nav");
 let megaTimer;
 function openMega(){ clearTimeout(megaTimer); navCats.classList.add("open"); catsToggle.setAttribute("aria-expanded","true"); }
 function closeMega(){ navCats.classList.remove("open"); catsToggle.setAttribute("aria-expanded","false"); }
 catsToggle.addEventListener("click", function(e){ e.stopPropagation(); navCats.classList.contains("open") ? closeMega() : openMega(); });
 navCats.addEventListener("mouseenter", openMega);
-navCats.addEventListener("mouseleave", function(){ megaTimer = setTimeout(closeMega, 170); });
+navCats.addEventListener("mouseleave", function(){ megaTimer = setTimeout(closeMega, 150); });
 function closeMobile(){ document.body.classList.remove("menu-open"); burger.setAttribute("aria-expanded","false"); }
 burger.addEventListener("click", function(){
   document.body.classList.toggle("menu-open");
@@ -1515,180 +915,9 @@ document.addEventListener("click", function(e){
     setFilter(catBtn.dataset.cat, !catBtn.closest(".pills"));
   }
 });
+addEventListener("scroll", function(){ nav.classList.toggle("scrolled", scrollY > 10); }, { passive:true });
 
-/* ---------- Generative cinematic canvas (layer beneath poster/video) ---------- */
-function hexA(hex,a){
-  const n = parseInt(hex.slice(1),16);
-  return "rgba(" + ((n>>16)&255) + "," + ((n>>8)&255) + "," + (n&255) + "," + a + ")";
-}
-function Cine(canvas, opts){
-  this.c = canvas; this.ctx = canvas.getContext("2d");
-  this.o = opts; this.t = Math.random()*80; this.running = false; this.raf = 0; this.suppressed = false;
-  var self = this;
-  this.resize = function(){
-    var r = canvas.parentElement.getBoundingClientRect();
-    if(r.width < 2) r = { width: innerWidth, height: innerHeight };
-    canvas.width  = Math.max(140, Math.round(r.width  * .15));
-    canvas.height = Math.max(90,  Math.round(r.height * .15));
-    self.draw();
-  };
-  this.draw = function(){
-    var w = canvas.width, h = canvas.height, ctx = self.ctx, o = self.o;
-    ctx.fillStyle = o.base; ctx.fillRect(0,0,w,h);
-    o.blobs.forEach(function(b){
-      var x = (b.x + Math.cos(self.t*b.sp + b.ph) * b.or) * w;
-      var y = (b.y + Math.sin(self.t*b.sp*b.dr + b.ph) * b.or) * h;
-      var r = b.r * w;
-      var g = ctx.createRadialGradient(x,y,0,x,y,r);
-      g.addColorStop(0, hexA(b.c, b.a)); g.addColorStop(1, hexA(b.c, 0));
-      ctx.fillStyle = g; ctx.beginPath(); ctx.arc(x,y,r,0,6.2832); ctx.fill();
-    });
-    var v = ctx.createRadialGradient(w/2,h/2,Math.min(w,h)*.25, w/2,h/2, Math.max(w,h)*.75);
-    v.addColorStop(0,"rgba(14,20,11,0)"); v.addColorStop(1,"rgba(14,20,11," + o.vig + ")");
-    ctx.fillStyle = v; ctx.fillRect(0,0,w,h);
-  };
-  this.frame = function(){
-    if(!self.running) return;
-    if(!self.suppressed){ self.t += .016; self.draw(); }
-    self.raf = requestAnimationFrame(self.frame);
-  };
-  this.start = function(){ if(self.running || REDUCED) return; self.running = true; self.frame(); };
-  this.stop  = function(){ self.running = false; cancelAnimationFrame(self.raf); };
-  this.setSuppressed = function(b){ self.suppressed = b; };
-  var rt;
-  addEventListener("resize", function(){ clearTimeout(rt); rt = setTimeout(self.resize, 180); });
-  document.addEventListener("visibilitychange", function(){ document.hidden ? self.stop() : self.start(); });
-  this.resize();
-}
-const cine1 = new Cine($(".scene-1 canvas"), { base:"#EBE5D4", vig:.15, blobs:[
-  { c:"#FFFEF6", a:.9,  r:.55, x:.28, y:.30, or:.10, sp:.05,  ph:0,   dr:.7 },
-  { c:"#DFE5CD", a:.75, r:.50, x:.72, y:.22, or:.12, sp:.034, ph:2.1, dr:1.3 },
-  { c:"#F4ECD7", a:.85, r:.60, x:.60, y:.85, or:.09, sp:.026, ph:4.2, dr:.9 },
-  { c:"#CBD5BC", a:.50, r:.38, x:.12, y:.80, or:.14, sp:.045, ph:1.2, dr:1.1 }
-]});
-const cine2 = new Cine($(".scene-2 canvas"), { base:"#1C2618", vig:.34, blobs:[
-  { c:"#2F4128", a:.95, r:.55, x:.30, y:.35, or:.11, sp:.03,  ph:0,   dr:.8 },
-  { c:"#4A5E3A", a:.60, r:.42, x:.72, y:.62, or:.13, sp:.022, ph:2.5, dr:1.2 },
-  { c:"#182213", a:.90, r:.50, x:.85, y:.15, or:.09, sp:.04,  ph:1,   dr:.9 },
-  { c:"#93A37C", a:.22, r:.35, x:.50, y:.50, or:.16, sp:.055, ph:3.3, dr:1.1 }
-]});
-[[ $("#home"), cine1 ], [ $("#philosophy"), cine2 ]].forEach(function(pair){
-  new IntersectionObserver(function(es){ es[0].isIntersecting ? pair[1].start() : pair[1].stop(); },
-    { threshold:.02 }).observe(pair[0]);
-});
-
-/* ---------- Scene media: poster frame now, video when it exists ---------- */
-function mountScene(sceneEl, cfg, cine){
-  const media = sceneEl.querySelector(".media");
-  if (cfg.objectPosition) media.style.setProperty("--obj-pos", cfg.objectPosition);
-  const isMobile = matchMedia("(max-width:760px)").matches;
-  const src = (isMobile && cfg.mobileSrc) ? cfg.mobileSrc : cfg.src;
-  if (cfg.poster){
-    const img = document.createElement("img");
-    img.className = "media-poster"; img.src = cfg.poster; img.alt = ""; img.loading = "eager";
-    img.addEventListener("error", function(){ img.remove(); }, { once:true });
-    media.appendChild(img);
-  }
-  if (!src) return null;
-  const v = document.createElement("video");
-  v.muted = true; v.playsInline = true;
-  v.setAttribute("playsinline",""); v.setAttribute("aria-hidden","true");
-  v.preload = "auto"; v.loop = false; v.autoplay = true;
-  v.src = src; v.style.opacity = "0";
-  media.appendChild(v);
-
-  const X = VIDEO_CONFIG.crossfade;
-  let raf = 0, dead = false, phase = "in", opacity = 0, last = 0, armed = false, suppressed = false;
-
-  function tick(t){
-    if(dead) return;
-    const dt = last ? Math.min(t - last, 100) : 16; last = t;
-    const d = v.duration;
-    if(armed){
-      if(isFinite(d) && d > 0){
-        const remaining = d - v.currentTime;
-        if(phase === "in"){
-          opacity = Math.min(1, opacity + dt / X.fadeMs);
-          if(remaining <= X.fadeOutLead) phase = "out";
-        }else{
-          opacity = Math.max(0, opacity - dt / X.fadeMs);
-          if(opacity <= 0 || v.ended){ v.currentTime = 0; phase = "in"; }
-        }
-      }else{ opacity = 1; phase = "in"; }
-    }
-    v.style.opacity = opacity.toFixed(3);
-    const sup = opacity >= .95;
-    if(cine && sup !== suppressed){ suppressed = sup; cine.setSuppressed(sup); }
-    raf = requestAnimationFrame(tick);
-  }
-  function onEnded(){ v.currentTime = 0; phase = "in"; v.play().catch(function(){}); }
-  function start(){ if(armed || dead) return; armed = true; last = 0; raf = requestAnimationFrame(tick); }
-  function tryPlay(){
-    if(REDUCED){ v.style.opacity = "1"; return; }
-    v.play().then(start).catch(function(){
-      const unlock = function(){ v.play().then(start).catch(function(){}); };
-      document.addEventListener("touchend", unlock, { once:true, passive:true });
-      document.addEventListener("click", unlock, { once:true });
-    });
-  }
-  v.addEventListener("loadeddata", tryPlay, { once:true });
-  v.addEventListener("canplay", tryPlay, { once:true });
-  v.addEventListener("ended", onEnded);
-  v.addEventListener("error", function(){ if(dead) return; v.remove(); if(cine) cine.setSuppressed(false); }, { once:true });
-  const vio = new IntersectionObserver(function(es){
-    if(dead) return;
-    es[0].isIntersecting ? v.play().catch(function(){}) : v.pause();
-  }, { threshold:.05 });
-  vio.observe(sceneEl);
-  return {
-    destroy: function(){
-      dead = true; cancelAnimationFrame(raf); vio.disconnect();
-      v.removeEventListener("ended", onEnded);
-      v.pause(); v.removeAttribute("src"); v.load(); v.remove();
-      if(cine) cine.setSuppressed(false);
-    }
-  };
-}
-const video1 = mountScene($(".scene-1"), VIDEO_CONFIG.hero, cine1);
-const video2 = mountScene($(".scene-2"), VIDEO_CONFIG.scene2, cine2);
-
-/* ---------- Scroll-driven cinematic progression ---------- */
-const s1 = { wrap: $("#home"), el: $(".scene-1") };
-const s2 = { wrap: $("#philosophy"), el: $(".scene-2") };
-const page = $(".page"), nav = $("#nav");
-let t1 = 0, t2 = 0, c1 = 0, c2 = 0, dark = false, scrolled = false;
-function readScroll(){
-  const vh = innerHeight;
-  const r1 = s1.wrap.getBoundingClientRect();
-  t1 = Math.max(0, Math.min(1, -r1.top / Math.max(1, r1.height - vh)));
-  const r2 = s2.wrap.getBoundingClientRect();
-  t2 = Math.max(0, Math.min(1, -r2.top / Math.max(1, r2.height - vh)));
-  scrolled = scrollY > 40;
-  const rs = s2.el.getBoundingClientRect(), rp = page.getBoundingClientRect();
-  dark = rs.top < 60 && rs.bottom > vh * .5 && rp.top > 60;
-}
-addEventListener("scroll", readScroll, { passive:true });
-readScroll();
-(function loop(){
-  if(REDUCED){ c1 = t1; c2 = t2; }
-  else{
-    c1 += (t1 - c1) * .09; c2 += (t2 - c2) * .09;
-    if(Math.abs(t1 - c1) < .0004) c1 = t1;
-    if(Math.abs(t2 - c2) < .0004) c2 = t2;
-  }
-  s1.el.style.setProperty("--p", c1.toFixed(4));
-  s2.el.style.setProperty("--p", c2.toFixed(4));
-  const bsc = document.body.classList.contains("nav-scrolled");
-  if(scrolled !== bsc) document.body.classList.toggle("nav-scrolled", scrolled);
-  const bd = document.body.classList.contains("on-dark");
-  if(dark !== bd) document.body.classList.toggle("on-dark", dark);
-  requestAnimationFrame(loop);
-})();
-
-/* =====================================================================
-   BOOT — render ALL content FIRST, then wire animations.
-   Emergency reveal: even if something throws, the page stays visible.
-   ===================================================================== */
+/* ---------- boot ---------- */
 function emergencyReveal(){
   try{
     $$(".grid").forEach(g=>g.classList.add("on"));
@@ -1699,13 +928,12 @@ try {
   $("#year").textContent = new Date().getFullYear();
   $("#statProducts").textContent = PRODUCTS.length;
   renderCategoryBits();
-  renderFeatured();
   renderSocials();
   renderGrid("all");
 
   $$("[data-stagger]").forEach(function(g){
     Array.prototype.forEach.call(g.children, function(c,i){
-      c.style.setProperty("--d", (i*90) + "ms");
+      c.style.setProperty("--d", (i*80) + "ms");
       c.setAttribute("data-reveal","");
     });
   });
@@ -1720,11 +948,11 @@ try {
     entries.forEach(function(en){
       if(en.isIntersecting){ en.target.classList.add("in"); io.unobserve(en.target); }
     });
-  }, { threshold:.15, rootMargin:"0px 0px -6% 0px" });
+  }, { threshold:.12, rootMargin:"0px 0px -5% 0px" });
   $$("[data-reveal],[data-blur-text]").forEach(el=>io.observe(el));
   const gridIO = new IntersectionObserver(function(es){
     if(es[0].isIntersecting){ grid.classList.add("on"); gridIO.disconnect(); }
-  }, { threshold:.06 });
+  }, { threshold:.05 });
   gridIO.observe(grid);
 } catch (bootError) {
   console.error("VAYRON boot error:", bootError);
